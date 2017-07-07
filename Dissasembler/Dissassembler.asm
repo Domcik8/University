@@ -1,4 +1,4 @@
-;2013.12.08															;CORRECT JUMPS + ADDRESS ; correct c/r and case_f
+;2013.12.09													;CORRECT JUMPS + ADDRESS ; correct c/r and case_f ;Prefiksas kur atm
 .model small
 	Input_Buffer_Length equ 16
 	Output_Buffer_Length equ 71										;21 + 50
@@ -296,7 +296,9 @@ OPCFF db "TWO BYTES      ", 0
 	Reg db "XX"																								;Holds Register
 	RM db "XX+XX+    " 																						;Holds Register Or EA (Effective Address)
 	Offset_16Bit db "XX"																					;Holds Offset's First 8 Bits
-	Extra_W db 0																							;Used In Case_F
+	Helper_Address dw 0																						;Extra Register Used To Hold Return Address
+	Helper dw 0																								;Extra Register Used To Hold Register
+	Helper_2 dw 0																							;Same As Helper
 ;**********************************************************************************************
 .code
 Start:
@@ -472,6 +474,7 @@ Jump_To_Close_Input_And_Output_Files:
 	Jmp Close_Input_And_Output_Files		 	;Close All files And Exit
 ;**********************************************************************************************
 Read_Byte:										;Reads Byte, Increases Address, Puts Byte To Data_Output_Buffer
+	Mov Helper, 0								;Used Only If R/m Is 110 While Mod 00
 	Call Check_Buffer
 	Mov Dh, [Ds:Si]								;Put First Byte To Dh
 	Inc Si	
@@ -997,8 +1000,6 @@ Case_F:											;X0XX X0DW Mod Reg R/M [Offset]									;For Example Add Reg <
 ;Dh - First Byte Read							;Read In Main_Function			
 ;Si - Points To Input_Buffers Current Byte 		;Comes From Read_From_Input_File
 ;Di - Points To Case Number						;Comse From Case_Check_1
-	Mov Bl, W
-	Mov Extra_W, Bl
 	Mov Bx, 0
 	Call Check_D_1
 	Call Check_W_1
@@ -1010,7 +1011,11 @@ Case_F:											;X0XX X0DW Mod Reg R/M [Offset]									;For Example Add Reg <
 	Shl Dx, 3
 	Call Check_Reg_1
 	Pop Dx
+	Push Si
+	Push Cx
 	Call Check_Rm_1
+	Pop Cx
+	Pop Si
 	Push Si
 	Push Cx
 	Call Set_Si_To_Code_Name
@@ -1081,9 +1086,8 @@ Case_F_Fill_Comma:
 	Ret
 ;***************************************
 Case_F_Fill_Mem_Or_Reg_1:
-	Cmp Bh, 1
-	Je Mod_00_Rm_110
-Case_F_Fill_Mem_Or_Reg_2:	
+	Cmp Helper, 0FFFFh
+	Je Address_In_Bm
 	Mov Bl, Bh
 	Mov Bh, 0
 	Push Si
@@ -1096,25 +1100,28 @@ Case_F_Fill_Mem_Or_Reg_2:
 	Add Si, Bx
 	Add Cx, Bx	
 	Ret	
-;*************************************** ;CHECK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Mod_00_Rm_110:
-	Push SI
-	Mov Si, Offset W
-	Mov Byte Ptr[Ds:Si], 1
-	Pop Si
-	Pop Dx
-	;Mov Helper, Dx
-	Call Immediate_Byte_1
-	Mov Bx, Cx
-	Pop Si
-	Pop Cx
-	Pop Dx
-	Call Check_W_1
+Address_In_Bm:
+	Mov Bl, Bh
+	Mov Bh, 0
 	Push Si
 	Push Cx
-	Mov Cx, Bx
-	;Push Helper
-	Ret
+	Mov Si, Offset Rm
+	Mov Cx, 2
+	Rep Movsb
+	Pop Cx
+	Pop Si
+	Push Si
+	Push Cx
+	Mov Si, Offset Rm
+	Add Si, 3
+	Mov Cx, 2
+	Rep Movsb
+	Pop Cx
+	Pop Si
+	Add Si, Bx
+	Add Cx, Bx	
+	Ret	
+;***************************************
 Case_F_2:
 	Call Add_Enter_To_Code_Output_Buffer
 	Call Fill_Output_Buffer
@@ -1327,6 +1334,7 @@ Check_Reg_4_Reg:
 	Ret
 ;**********************************************************************************************
 Check_RM_1:									;Reads R/m From Dh And Puts It To Rm
+;When Calling Check_RM_1 You MUST have Ret, Cx, Si In Stack
 ;Bh Holds Lenght Of Rm, If dh = 1 then it needs Immediate Address
 	Push Dx;
 	Push Si;
@@ -1335,6 +1343,7 @@ Check_RM_1:									;Reads R/m From Dh And Puts It To Rm
 	Shl Dx, 3
 	Mov Si, Offset Mod_
 	Mov Bl, [Ds:Si]
+	Pop Si
 	Cmp Bl, 0
 	Je Jump_To_Mod_0
 	Cmp Bl, 3
@@ -1361,26 +1370,26 @@ Rm_000_2:
 	Call Memory_Si
 	Inc Si
 	Mov Bh, 6
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 Rm_001_2:
 	Call Memory_Bx
 	Inc Si
 	Call Memory_Di
 	Inc Si
 	Mov Bh, 6
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 Rm_010_2:
 	Call Memory_Bp
 	Call Memory_Si
 	Inc Si
 	Mov Bh, 6
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 Rm_011_2:
 	Call Memory_Bp
 	Call Memory_Di
 	Inc Si
 	Mov Bh, 6
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 Jump_To_Mod_0:
 	Jmp Mod_0
 ;***************************************
@@ -1390,43 +1399,58 @@ Jump_To_Mod_11_1:
 Rm_100_2:
 	Mov Si, Offset Rm
 	Call Memory_Si
-	Mov Bh, 2
-	Jmp Fill_Offset_16Bit
+	Inc Si
+	Mov Bh, 3
+	Jmp Fill_Offset_1
 Rm_101_2:
 	Mov Si, Offset Rm
 	Call Memory_Di
-	Mov Bh, 2
-	Jmp Fill_Offset_16Bit
+	Inc Si
+	Mov Bh, 3
+	Jmp Fill_Offset_1
 Rm_110_2:
 	Call Memory_Bp
 	Mov Bh, 3
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 Rm_111_2:
 	Call Memory_BX
 	Inc Si
 	Mov Bh, 3
-	Jmp Fill_Offset_16Bit
+	Jmp Fill_Offset_1
 ;***************************************
-Fill_Offset_16Bit:
+Fill_Offset_1:
+	Mov Bp, Si
+	Pop Dx
+	Pop Helper_Address
+	Pop Cx
 	Pop Si
 	Call Read_Byte
 	Call Convert_ASCII_To_Hex_1
+	Mov Helper_2, Ax
+	Cmp Mod_, 2
+	Je Fill_Offset_M_10
+Fill_Offset_M_00:	
+	Mov Al, Dh
+	Cbw
+	Push Dx
+	Mov Dh, Ah
+	Call Convert_ASCII_To_Hex_1	
+	Pop Dx
+	Jmp Fill_Offset_2
+Fill_Offset_M_10:
+	Call Read_Byte
+	Call Convert_ASCII_To_Hex_1
+Fill_Offset_2:
 	Push Si
-	Call Check_Offset_16Bit
-	Push Di
-	Mov Di, Si
-	Mov Si, Offset Offset_16Bit
 	Push Cx
-	Push Di
-	Mov Cx, 2
-	Rep Movsb									;Copies Cx Bytes From [Ds:Si] To [Es:Di]	
-	Pop Di
-	Pop Cx
-	Mov Si, Di
+	Mov Si, Bp
+	Mov [Ds:Si], Ax
 	Add Si, 2
+	Mov Ax, Helper_2
 	Mov [Ds:Si], Ax
 	Add Bh, 4
-	Pop Di
+	Push Helper_Address
+	Push Dx
 	Jmp Check_RM_2
 ;***************************************
 Mod_0:
@@ -1477,8 +1501,7 @@ Rm_101_1:
 	Mov Bh, 2
 	Jmp Check_RM_2
 Rm_110_1:
-	Mov Dh, 1	
-	Jmp Check_RM_2
+	Jmp Mod_00_Rm_110_1
 Rm_111_1:
 	Call Memory_BX
 	Mov Bh, 2
@@ -1501,6 +1524,31 @@ Memory_Di:
 	Mov [Ds:Si], 'iD'
 	Add Si, 2
 	Ret
+Mod_00_Rm_110_1:                              ;CHECKSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+;Bp rodo kiek buvo simboliu Si+Di+
+;Si rodo kur rasyti Si+Di+CIA
+;Steke turi buti Dx,  Call i Rm po to Cx, Si
+	Pop Dx
+	Pop Helper_Address
+	Pop Cx
+	Pop Si
+	Call Read_Byte
+	Call Convert_ASCII_To_Hex_1
+	Mov Helper_2, Ax
+	Call Read_Byte
+	Call Convert_ASCII_To_Hex_1	
+	Push Si
+	Push Cx
+	Push Helper_Address
+	Push Dx
+	Mov Si, Offset Rm
+	Mov [Ds:Si], Ax
+	Add Si, 3
+	Mov Helper, 0FFFFh
+	Mov Ax, Helper_2
+	Mov [Ds:Si], Ax
+	Add Bh, 4
+	Jmp Check_RM_2	
 ;***************************************
 Mod_11_1:
 	Mov Dl, 0									;0 - Dh Was Not Subbed; 1 - Dh Was Subbed	
@@ -1583,7 +1631,6 @@ Register_Di_Rm:
 Inc_Bh:
 	Mov Bh, 2
 Check_RM_2:
-	Pop Si
 	Pop Dx
 	Ret
 ;**********************************************************************************************
