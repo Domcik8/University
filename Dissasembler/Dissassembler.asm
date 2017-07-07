@@ -1,6 +1,4 @@
-;2013.12.14															;CORRECT JUMPS + ADDRESS ; correct c/r and case_f ;Prefiksas kur atm
-										;Correct Case G IP + ADDRESS, B + SEGMENT, C + IP AND ADDRESS, Case_E pRZEPATRZ
-										;cASE F TO DEFAULT
+;2013.12.14														;LAST VERSION
 .model small
 	Input_Buffer_Length equ 16
 	Output_Buffer_Length equ 71										;21 + 50
@@ -766,7 +764,7 @@ Case_6:											;1001 0REG														;XCHG
 	Add Di, Cx
 	Mov [Ds:Di], ' ,'
 	Add Di, 2
-	Mov [Ds:Di], 'XA'
+	Mov [Ds:Di], 'xA'
 	Add Di, 2
 	Add Cx, 4
 	Call Add_Enter_To_Code_Output_Buffer
@@ -808,7 +806,14 @@ Case_8:											;XXXX XXXW IOLB [IOHB] 											;For Example Test
 	Call Check_W_1
 	Call Set_Si_To_Code_Name
 	Call Fill_Code_Output_Buffer
-	Mov [Ds:Di], 'XA'
+	Cmp W, 1
+	Je Case_8_W_1
+Case_8_W_0:
+	Mov [Ds:Di], 'lA'
+	Jmp Case_8_2
+Case_8_W_1:
+	Mov [Ds:Di], 'xA'
+Case_8_2:	
 	Add Di, 2
 	Mov [Ds:Di], ' ,'
 	Add Di, 2
@@ -835,9 +840,9 @@ Case_9:											;1110 01XW Port 												;In / Out (Port)
 	Je Case_9_W_1
 Case_9_W_0:
 	Mov [Ds:Di], 'lA'
-	jmp Case_9_2
+	Jmp Case_9_2
 Case_9_W_1:
-	Mov [Ds:Di], 'XA'
+	Mov [Ds:Di], 'xA'
 Case_9_2:
 	Add Di, 2
 	Mov [Ds:Di], ' ,'
@@ -873,7 +878,7 @@ Case_A_W_0:
 	Mov [Ds:Di], 'lA'
 	jmp Case_A_2
 Case_A_W_1:
-	Mov [Ds:Di], 'XA'
+	Mov [Ds:Di], 'xA'
 Case_A_2:
 	Add Di, 2
 	Mov [Ds:Di], ' ,'
@@ -941,7 +946,7 @@ Case_B_W_0:
 	Mov [Ds:Di], 'lA'
 	Jmp Case_B_3
 Case_B_W_1:
-	Mov [Ds:Di], 'XA'
+	Mov [Ds:Di], 'xA'
 Case_B_3:
 	Add Di, 2
 	Add Cx, 2
@@ -970,27 +975,23 @@ Case_C:
 	Call Read_Byte								;0111 XXXX Offset (0-FF)										;J... (For Example Ja)
 	Push Si
 	Push Cx
-	Call Check_Offset_16Bit
+	Push Dx
+	Mov Al, Dh
+	Cbw
+	Add Ax, Address
+	Add Ax, 1
+	Mov Dx, Ax
 	Call Set_Si_To_Code_Name
 	Call Fill_Code_Output_Buffer
 	Call Convert_ASCII_To_Hex_1 
-	Push Si
-	Mov Si, Offset Offset_16Bit
-	Mov Di, Offset Code_Output_Buffer
-	Add Di, Cx
-	Push Cx
-	Push Si
-	Push Di
-	Mov Cx, 2
-	Rep Movsb									;Copies Cx Bytes From [Ds:Si] To [Es:Di]	
-	Pop Di
-	Pop Si
-	Pop Cx
+	Mov [Ds:Di], Ax
 	Add Di, 2
+	Mov Dh, Dl
+	Call Convert_ASCII_To_Hex_1 
 	Mov [Ds:Di], Ax
 	Add Di, 2
 	Add Cx, 4
-	Pop Si
+	Pop Dx
 	Call Add_Enter_To_Code_Output_Buffer
 	Call Fill_Output_Buffer
 	Call Write_To_Output_File
@@ -1042,18 +1043,44 @@ Case_Check_7:
 	Jmp Case_Check_8
 ;**********************************************************************************************	
 Case_E: 										;1XXX 1010 ALB AHB SRLB SRHB 									;Jmp / Call (Long Direct)
-	Push Si										;(Immediate Operand Pointing To SR Low Byte / High Byte)
-	Push Cx
-	Mov Si, Offset W
-	Mov Byte Ptr [Ds:Si], 1
-	Pop Cx
-	Pop Si
+	Call Read_Byte								;(Immediate Operand Pointing To SR Low Byte / High Byte)
+	Mov Bp, Dx
+	Call Read_Byte	
+	Mov Ax, Bp
+	Mov Al, Ah
+	Mov Ah, Dh
+	Mov Helper_2, Ax
+	Call Read_Byte
+	Mov Bp, Dx
+	Call Read_Byte	
+	Mov Ax, Bp
+	Mov Al, Ah
+	Mov Ah, Dh	
 	Push Si
 	Push Cx
 	Call Set_Si_To_Code_Name
 	Call Fill_Code_Output_Buffer
-	Call Immediate_Byte_1
-	Call Immediate_Byte_1
+	Push Dx
+	Mov Dx, Ax
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Mov Dh, Dl
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Mov Byte Ptr[Ds:Di], ':'
+	Inc Di
+	Mov Dx, Helper_2
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Mov Dh, Dl
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Add Cx, 9	
+	Pop Dx
 	Call Add_Enter_To_Code_Output_Buffer
 	Call Fill_Output_Buffer
 	Call Write_To_Output_File
@@ -1257,26 +1284,40 @@ Case_Check_8:
 	Cmp Bp, "H"
 	Je Case_H
 	Jmp Case_Check_9
-;***************************************
-Jump_To_Case_F_D_0_1:
-	Jmp Case_F_D_0_1
 ;**********************************************************************************************	
 Case_G:											;1110 100X SLB SHB  (Offset Low Byte / High Byte)				;CALL / Jmp (Short Direct)
-	Push Si
-	Mov Si, Offset W
-	Mov Byte Ptr [Ds:Si], 1
-	Pop Si
+	Call Read_Byte
+	Mov Bp, Dx
+	Call Read_Byte
 	Push Si
 	Push Cx
 	Call Set_Si_To_Code_Name
 	Call Fill_Code_Output_Buffer
-	Call Immediate_Byte_1
+	Mov Ax, Bp
+	Mov Al, Ah
+	Mov Ah, Dh
+	Add Ax, Address
+	Inc Ax
+	Push Dx
+	Mov Dx, Ax
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Mov Dh, Dl
+	Call Convert_ASCII_To_Hex_1 
+	Mov [Ds:Di], Ax
+	Add Di, 2
+	Add Cx, 4
+	Pop Dx
 	Call Add_Enter_To_Code_Output_Buffer
 	Call Fill_Output_Buffer
 	Call Write_To_Output_File
 	Pop Cx
 	Pop Si
 	Ret
+;***************************************
+Jump_To_Case_F_D_0_1:
+	Jmp Case_F_D_0_1
 ;**********************************************************************************************	
 Case_H:											;1000 11d0 Mod0 SR R/M [Offset]									;Mov Sr <-> R/M
 	Mov Helper_Flag, 1
@@ -1332,7 +1373,7 @@ Case_Check_9:
 	Jmp Case_Check_10
 ;**********************************************************************************************
 Case_J:											;1000 1111 mod00 0r/m [Offset]									;Pop R/M
-	Call Check_W_1
+	Call Check_W_1								;1101 1xxx mod yyy r/m [Offset]									;ESC R/M
 	Mov Bx, 0
 	Call Check_D_1
 	Call Read_Byte
@@ -1581,6 +1622,7 @@ Case_O:											;1111 011w Mod 000 R/M [Offset] IOLB [IOHB] And 1111 011w Mod 
 	Push Dx
 	Call Read_Byte
 	Dec Si
+	Dec Address
 	Call Check_OPC_Extension
 	Pop Dx
 	Cmp OPC_Extension, 0
@@ -1593,6 +1635,7 @@ Case_R:											;1111 111w Mod 00X R/M [Offset] IOLB [IOHB] And 1111 111w Mod 
 	Push Dx
 	Call Read_Byte
 	Dec Si
+	Dec Address
 	Call Check_OPC_Extension
 	Pop Dx
 	Cmp OPC_Extension, 0
@@ -1849,7 +1892,7 @@ Check_Reg_Two_Byte_Reg:
 	Add Sp, 2
 	Cmp Dl, 1
 	Je Check_Reg_3_Reg
-	Mov Byte Ptr [Ds:Si], 'X'
+	Mov Byte Ptr [Ds:Si], 'x'
 	Jmp Check_Reg_4_Reg
 ;***************************************
 Check_Reg_3_Reg:
@@ -2155,7 +2198,7 @@ Check_Reg_Two_Byte_Rm:
 	Add Sp, 2
 	Cmp Dl, 1
 	Je Check_Reg_3_Rm
-	Mov Byte Ptr [Ds:Si], 'X'
+	Mov Byte Ptr [Ds:Si], 'x'
 	Jmp Inc_Bh
 Check_Reg_3_Rm:
 	Cmp Dh, 0
