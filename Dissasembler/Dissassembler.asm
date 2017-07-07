@@ -1,7 +1,8 @@
-;2013.11.30
+;2013.12.01
 .model small
 	Input_Buffer_Length equ 16
-	Output_Buffer_Length equ 255
+	Output_Buffer_Length equ 71										;21 + 50
+	Uncommon_Output_Buffer_Length equ 50
 .stack 100h
 .data
 ;**********************************************************************************************
@@ -46,7 +47,7 @@ OPC23 db "AND           $", 0
 OPC24 db "AND           $", 00
 OPC25 db "AND           $", 00
 OPC26 db "PREFIKSAS     $", "P"
-OPC27 db "DAA           $", 000
+OPC27 db "DAA           $", 1
 OPC28 db "SUB           $", 0
 OPC29 db "SUB           $", 0
 OPC2A db "SUB           $", 0
@@ -54,7 +55,7 @@ OPC2B db "SUB           $", 0
 OPC2C db "SUB           $", 00
 OPC2D db "SUB           $", 00
 OPC2E db "PREFIKSAS     $", "P"
-OPC2F db "DAS           $", 000
+OPC2F db "DAS           $", 1
 OPC30 db "XOR           $", 0
 OPC31 db "XOR           $", 0
 OPC32 db "XOR           $", 0
@@ -62,7 +63,7 @@ OPC33 db "XOR           $", 0
 OPC34 db "XOR           $", 00
 OPC35 db "XOR           $", 00
 OPC36 db "PREFIKSAS     $", "P"
-OPC37 db "AAA           $", 000
+OPC37 db "AAA           $", 1
 OPC38 db "CMP           $", 0
 OPC39 db "CMP           $", 0
 OPC3A db "CMP           $", 0
@@ -70,7 +71,7 @@ OPC3B db "CMP           $", 0
 OPC3C db "CMP           $", 00
 OPC3D db "CMP           $", 00
 OPC3E db "PREFIKSAS     $", "P"
-OPC3F db "AAS           $", 000            
+OPC3F db "AAS           $", 1
 OPC40 db "INC           $", 0
 OPC41 db "INC           $", 0
 OPC42 db "INC           $", 0
@@ -151,7 +152,7 @@ OPC8C db "MOV           $", 00
 OPC8D db "LEA           $", 0
 OPC8E db "MOV           $", 00
 OPC8F db "POP           $", 0
-OPC90 db "NOP           $", 0
+OPC90 db "NOP           $", 1
 OPC91 db "XCHG          $", 0
 OPC92 db "XCHG          $", 0
 OPC93 db "XCHG          $", 0
@@ -159,14 +160,14 @@ OPC94 db "XCHG          $", 0
 OPC95 db "XCHG          $", 0
 OPC96 db "XCHG          $", 0
 OPC97 db "XCHG          $", 0
-OPC98 db "CBW           $", 0 
-OPC99 db "CWD           $", 0
+OPC98 db "CBW           $", 1 
+OPC99 db "CWD           $", 1
 OPC9A db "CALL          $", 0
-OPC9B db "WAIT          $", 0
-OPC9C db "PUSHF         $", 0
-OPC9D db "POPF          $", 0
-OPC9E db "SAHF          $", 0
-OPC9F db "LAHF          $", 0
+OPC9B db "WAIT          $", 1
+OPC9C db "PUSHF         $", 1
+OPC9D db "POPF          $", 1
+OPC9E db "SAHF          $", 1
+OPC9F db "LAHF          $", 1
 OPCA0 db "MOV           $", 0
 OPCA1 db "MOV           $", 0
 OPCA2 db "MOV           $", 00
@@ -202,7 +203,7 @@ OPCBF db "MOV           $", 0
 OPCC0 db "UNKNOWN       $", 0
 OPCC1 db "UNKNOWN       $", 0
 OPCC2 db "RET           $", 0
-OPCC3 db "RET           $", 00
+OPCC3 db "RET           $", 1
 OPCC4 db "LES           $", 0
 OPCC5 db "LDS           $", 0
 OPCC6 db "MOV           $", 0
@@ -210,11 +211,11 @@ OPCC7 db "MOV           $", 0
 OPCC8 db "UNKNOWN       $", 0
 OPCC9 db "UNKNOWN       $", 0
 OPCCA db "RETF          $", 0
-OPCCB db "RETF          $", 00
+OPCCB db "RETF          $", 1
 OPCCC db "INT           $", "3"
 OPCCD db "INT           $", 0
-OPCCE db "INTO          $", 0
-OPCCF db "IRET          $", 0
+OPCCE db "INTO          $", 1
+OPCCF db "IRET          $", 1
 OPCD0 db "TWO BYTES     $", 0
 OPCD1 db "TWO BYTES     $", 0
 OPCD2 db "TWO BYTES     $", 0
@@ -222,7 +223,7 @@ OPCD3 db "TWO BYTES     $", 0
 OPCD4 db "AAM           $", 0
 OPCD5 db "AAD           $", 0
 OPCD6 db "UNKNOWN       $", 0
-OPCD7 db "XLAT          $", 0
+OPCD7 db "XLAT          $", 1
 OPCD8 db "ESC           $", 0
 OPCD9 db "ESC           $", 0
 OPCDA db "ESC           $", 0
@@ -247,20 +248,20 @@ OPCEC db "IN            $", 0
 OPCED db "IN            $", 0
 OPCEE db "OUT           $", 0
 OPCEF db "OUT           $", 0
-OPCF0 db "LOCK          $", 0
+OPCF0 db "LOCK          $", 1
 OPCF1 db "UNKNOWN       $", 0
-OPCF2 db "REPNZ         $", 0
-OPCF3 db "REP           $", 0
-OPCF4 db "HLT           $", 0
-OPCF5 db "CMC           $", 0
+OPCF2 db "REPNZ         $", 1
+OPCF3 db "REP           $", 1
+OPCF4 db "HLT           $", 1
+OPCF5 db "CMC           $", 1
 OPCF6 db "TWO BYTES     $", 0
 OPCF7 db "TWO BYTES     $", 0
-OPCF8 db "CLC           $", 000
-OPCF9 db "STC           $", 000
-OPCFA db "CLI           $", 000
-OPCFB db "STI           $", 000
-OPCFC db "CLD           $", 000
-OPCFD db "STD           $", 000
+OPCF8 db "CLC           $", 1
+OPCF9 db "STC           $", 1
+OPCFA db "CLI           $", 1
+OPCFB db "STI           $", 1
+OPCFC db "CLD           $", 1
+OPCFD db "STD           $", 1
 OPCFE db "TWO BYTES     $", 0
 OPCFF db "TWO BYTES     $", 0
 ;**********************************************************************************************
@@ -281,11 +282,13 @@ OPCFF db "TWO BYTES     $", 0
 	Output_File db 15 dup (0)
 	Input_File_Handle dw 0
 	Output_File_Handle dw 0
-	Input_Buffer db Input_Buffer_Length dup (?)
-	Output_Buffer db Output_Buffer_Length dup (?)
-;**********************************************************************************************
-;In Whole Program Registers Mainly Hold
-;Di = Size Of Unused Bytes In Input Buffer
+	Input_Buffer db Input_Buffer_Length dup (0)
+	Common_Output_Buffer db "0000:	OPERATION CODE	"														;Holds Shift And Operation Code In Hex
+	Uncommon_Output_Buffer db Uncommon_Output_Buffer_Length dup (0)											;Holds Operation Code
+	Output_Buffer db Output_Buffer_Length dup (0)															;Used To Minimalimaze Writing To File
+	Not_Recognised_Buffer db "db 0x  "
+	Prefix db "Ds"																							;Holds Segment Register
+	Shift dw 100h								;Address Of First OPC
 ;**********************************************************************************************
 .code
 Start:
@@ -297,11 +300,12 @@ Start:
 	Call Check_Parameters_1																					;Works
 	Call Open_Input_File																					;Works
 	Call Create_Output_File																					;Works
+	Mov Cx, Ds									;Make Ds And Es Into One Segment
+	Mov Es, Cx									;Used In Fill_Uncommon_Output_Buffer
 ;	Call Open_Output_File																					;Not Being Used But Works
 	Call Read_From_Input_File					;Used Once To Fill Buffer									;Also Used In Main_Function
-	Jmp Main_Function																						;
-;	Call Write_To_Output_File					;At The Moment Used Only For Tests							;Not Being Used But Works
-;	Jmp Close_Input_And_Output_Files		 	;Close All files And Exit									;Used In Main_Function
+												;It Also Converts Read Bytes To Hex From ASCII
+	Jmp Main_Function																						;Needs Remake
 ;**********************************************************************************************
 ;Working With Parameters
 ;**********************************************************************************************
@@ -408,26 +412,27 @@ Jump_To_Error_3:
 Return:
 	Ret
 ;**********************************************************************************************
-Open_Output_File:																									;NOT BEING USED	
-	Mov Ah, 3Dh									;Open File Using Handle												;NOT BEING USED	
-	Mov Al, 1									;Open For Writing Only												;NOT BEING USED	
-	Mov Dx, Offset Output_File																						;NOT BEING USED	
-	Int 21h																											;NOT BEING USED	
-	Jc Jump_To_Error_4																								;NOT BEING USED	
-	mov [Output_File_Handle], Ax																					;NOT BEING USED	
-	Ret																												;NOT BEING USED	
-;**********************************************************************************************
-Jump_To_Error_4:																									;NOT BEING USED	
-	Jmp Error_4																										;NOT BEING USED	
+Open_Output_File:																						;NOT BEING USED	
+	Mov Ah, 3Dh									;Open File Using Handle									;NOT BEING USED	
+	Mov Al, 1									;Open For Writing Only									;NOT BEING USED	
+	Mov Dx, Offset Output_File																			;NOT BEING USED	
+	Int 21h																								;NOT BEING USED	
+	Jc Jump_To_Error_4																					;NOT BEING USED	
+	mov [Output_File_Handle], Ax																		;NOT BEING USED	
+	Ret																									;NOT BEING USED	
+;**********************************************************************************************			;NOT BEING USED	
+Jump_To_Error_4:																						;NOT BEING USED	
+	Jmp Error_4																							;NOT BEING USED	
 ;**********************************************************************************************
 Read_From_Input_File:
 	Mov Ah, 3Fh 								;Read From File or Device Using Handle
 	Mov Bx, Input_File_Handle					;Input File Handle
-	Mov Cx, Input_Buffer_Length						;Input_Buffer_Length Equ 16
+	Mov Cx, Input_Buffer_Length					;Input_Buffer_Length Equ 16
 	Mov Dx, Offset Input_Buffer					;Read To 
 	Int 21h										;Ax Now Holds Amount Of Bytes Read
 	Jc Jump_To_Error_5
-	Mov Di, Ax									;Di Used To Check Amount Of Bytes Unread
+	Cmp Ax, 0
+	Je Jump_To_Close_Input_And_Output_Files
 	Mov Cx, Ax									;Cx Used To Show Length Of Buffer Read
 	Mov Si, Offset Input_Buffer					;Put Buffer Start To Si
 	ret
@@ -436,11 +441,9 @@ Jump_To_Error_5:
 	Jmp Error_5
 ;**********************************************************************************************
 Write_To_Output_File:
-;*************************Cx Should Hold Number Of Bytes To Write******************************
+;Cx MUST Hold Number Of Bytes To Write 			;Dx MUST Point To Write Buffer
 	Mov Ah, 40h
 	Mov Bx, Output_File_Handle
-	Mov Dx, Offset Test_Message
-	Mov Cx, 22
 	Int 21h
 	Jc Jump_To_Error_6
 	Ret
@@ -452,23 +455,27 @@ Jump_To_Close_Input_And_Output_Files:
 	Jmp Close_Input_And_Output_Files		 	;Close All files And Exit
 ;**********************************************************************************************
 Main_Function:
-	Call Check_Buffer
-;	Inc Si 										;Buffer Byte 1 Returns The Number Of Chars							;NOT NEEDED
+;Cx - Input_Buffer Length 						;Comes From Read_From_Input_File	
+;Dh - Holds First Byte Read						;Read In Main_Function			
+;Si - Points To Input_Buffers Current Byte 		;Comes From Read_From_Input_File
+	Call Check_Buffer																									;WORKS
 	Mov Dh, [Ds:Si]								;Put First Byte To Dh
 	Inc Si
-	Dec Di
-	Call Check_Buffer							;Check If Buffer Did Not End
-	Mov Dl, [Ds:Si]								;Put Second Byte To Dl
-	Inc Si
-	Dec Di
+;	Call Fill_Shift_To_Buffer
+	Call Set_Prefix_To_Default					;Sets Prefix To Ds														;WORKS
+	Inc Shift
 	Call Case_Check								;Dx Holds 2 Bytes
-;	Call Write_To_Output_File
 	Jmp Main_Function
 ;**********************************************************************************************
 ;Checking If We Need To Read From File Again
 ;**********************************************************************************************
 Check_Buffer:
-	Cmp Di, 0
+;Cx - Input_Buffer Length 						;Comes From Read_From_Input_File	
+;Dh - Holds First Byte Read						;Read In Main_Function			
+;Si - Points To Input_Buffers Current Byte 		;Comes From Read_From_Input_File
+	Mov Di, Offset Input_Buffer
+	Add Di, Cx
+	Cmp Si, Di
 	Jne Return
 	Cmp Cx, Input_Buffer_Length
 	Jne Jump_To_Close_Input_And_Output_Files
@@ -477,28 +484,98 @@ Check_Buffer:
 ;**********************************************************************************************
 ;Checking All Possible Cases
 ;**********************************************************************************************
+;Cx - Input_Buffer Length 						;Comes From Read_From_Input_File	
+;Dh - Holds First Byte Read						;Read In Main_Function			
+;Si - Points To Input_Buffers Current Byte 		;Comes From Read_From_Input_File
 Case_Check:
 	Mov Bx, Offset OPC00
-	Mov Ax, 16
-	Mul Dx
+	Mov Ax, 16									;Each OPC Has 16 Symbols
+	Mul Dh
 	Add Bx, Ax
-	Add Bx, 15
-	
-	;If No Case Found Then Do Case_0
+	Add Bx, 15									;Now Bx Points To Case of OPC(Bx)
+;**********************************************************************************************	
 ;**********************************************************************************************
-Case_0:
+;**********************************************************************************************
+;**********************************************************************************************
+;**********************************************************************************************
+Case_0:											;File Not Recognised
+	Push Si
+	Push Cx
+	Call Convert_ASCII_To_Hex_1					;Brings Back Dh in Ax As ASCII (Al - The Quotient, Ah - Remainer)
+	Call Fill_Not_Recognised_Buffer_With_Not_Recognised_Byte
+	MOV Si, Offset Not_Recognised_Buffer
+	MOV Cx, 7
+	Call Fill_Uncommon_Output_Buffer	
+	Mov Dx, Offset Uncommon_Output_Buffer
 	Call Write_To_Output_File
+	Pop Cx
+	Pop Si
+	Ret
+
+;**********************************************************************************************
+Convert_ASCII_To_Hex_1:							;Converts Dh As ASCII to Ax As HEX (Al - The Quotient, Ah - Remainer)	(Example: Dh = B4 -> AH = 34, Al= 42)
+;Cx - Input_Buffer Length 						;Comes From Read_From_Input_File	
+;Dh - Holds First Byte Read						;Read In Main_Function			
+;Si - Points To Input_Buffers Current Byte 		;Comes From Read_From_Input_File
+	Xor Ax, Ax
+	Mov Al, Dh
+	Mov Bl, 10h
+	Div Bl
+Convert_ASCII_To_Hex_2:
+	Mov Bl, Al
+	Call Convert_ASCII_To_Hex_3
+	Mov Al, Bl
+	Mov Bl, Ah
+	Call Convert_ASCII_To_Hex_3
+	Mov Ah, Bl
+	Ret
+Convert_ASCII_To_Hex_3:
+	Cmp Bl, 10
+	Jb Convert_ASCII_To_Hex_4
+	Add Bl, 37h
+	Ret
+Convert_ASCII_To_Hex_4:
+	Add Bl, 30h
+	Ret
+;**********************************************************************************************
+Fill_Uncommon_Output_Buffer:
+;Si MUST Point To "FROM" Buffer							;Cx MUST Hold How Many Bytes To Copy
+	Push Cx
+	MOV Di, Offset Uncommon_Output_Buffer						;To
+	REP MOVSB											;Copies Cx Bytes From [Ds:Si] To [Es:Di]
+	Mov [Ds:Di], 0A0Dh									;Mov 10, 13 (New Line) (In Memory 13, 10)
+	Pop Cx
+	Add Cx, 2
+	Ret
+;**********************************************************************************************
+Fill_Not_Recognised_Buffer_With_Not_Recognised_Byte:
+	Mov Si, Offset Not_Recognised_Buffer
+	Add Si, 5
+	Mov [DS:Si], Al
+	Inc Si
+	Mov [DS:Si], Ah
 	Ret
 ;**********************************************************************************************
 ;**********************************************************************************************
 ;**********************************************************************************************
 ;**********************************************************************************************
 ;**********************************************************************************************
+Convert_ASCII_To_Decimal_1:
+;Bl - ASCII Symbol '0'-'9' Or 'A'-'F'
+	Cmp Bl, 3Ah									;Symbol After '9' (':')
+	Jb Convert_ASCII_To_Decimal_2
+	Sub Bl, 37h
+	Ret
+Convert_ASCII_To_Decimal_2:
+	Sub Bl, 30h
+	Ret
 ;**********************************************************************************************
-;**********************************************************************************************
-;**********************************************************************************************
-;**********************************************************************************************
-;**********************************************************************************************
+Set_Prefix_To_Default:
+	Push Si
+	Mov Si, Offset Prefix
+	Mov byte ptr[Ds:Si], 'D'
+	Pop Si
+	Ret
 ;**********************************************************************************************
 ;Error Messages
 ;**********************************************************************************************
