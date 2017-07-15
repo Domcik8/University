@@ -1,0 +1,1 @@
+SELECT vardas, pavarde, ak FROM stud.skaitytojas  WHERE mod(nr, 2) = 0 order by ak desc;

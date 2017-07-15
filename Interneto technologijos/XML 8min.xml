@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="XSLT.xslt" type="text/xsl"?>
+<lentele>
+  <stulpelis>
+    <Vardas>Dominik</Vardas>
+    <Amzius>21</Amzius>
+  </stulpelis>
+  <stulpelis>
+    <Vardas>Tomek</Vardas>
+    <Amzius>24</Amzius>
+  </stulpelis>
+  <stulpelis>
+    <Vardas>Gabriel</Vardas>
+    <Amzius>2</Amzius>
+  </stulpelis>
+  <stulpelis>
+    <Vardas>Damian</Vardas>
+    <Amzius>5</Amzius>
+  </stulpelis>
+  <stulpelis>
+    <Vardas>Damian</Vardas>
+    <Amzius>7</Amzius>
+  </stulpelis>
+</lentele>

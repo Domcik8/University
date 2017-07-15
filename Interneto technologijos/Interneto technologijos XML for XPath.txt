@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<galaxy name='Milky Way'>
+	<star_quantity>300000000000</star_quantity>
+	<star name='Sun'>
+		<mass>19885500</mass>
+		<planet_quantity>8</planet_quantity>
+		<planet name='Mercury' type='Terrestrial planet'>
+			<mass>3.3022</mass>
+			<satelite_quantity>0</satelite_quantity>
+		</planet>
+		<planet name='Venus' type='Terrestrial planet'>
+			<mass>48.676</mass>
+			<satelite_quantity>0</satelite_quantity>
+		</planet>
+		<planet name='Earth' type='Terrestrial planet' population='7.3 billion'>
+			<mass>59.7219</mass>
+			<satelite_quantity>1</satelite_quantity>
+			<continent_quantity>7</continent_quantity>
+			<continent name='Asia'></continent>
+			<continent name='Africa'></continent>
+			<continent name='North America'></continent>
+			<continent name='South America'></continent>
+			<continent name='Antarctica'></continent>
+			<continent name='Europe'></continent>
+			<continent name='Australia'></continent>
+			<satelite name='Moon'>
+				<mass>0.73477</mass>
+			</satelite>
+		</planet>
+		<planet name='Mars' type='Terrestrial planet'>
+			<mass>6.4185</mass>
+			<satelite_quantity>2</satelite_quantity>
+		</planet>
+		<planet name='Jupiter' type='Giant planet'>
+			<mass>18986</mass>
+			<satelite_quantity>67</satelite_quantity>
+			<satelite name='Io'>
+				<mass>0.8931938</mass>
+			</satelite>
+			<satelite name='Europa'>
+				<mass>0.4799844</mass>
+			</satelite>
+			<satelite name='Ganymede'>
+				<mass>1.4819</mass>
+			</satelite>
+			<satelite name='Callisto'>
+				<mass>1.075938</mass>
+			</satelite>
+		</planet>
+		<planet name='Saturn' type='Giant planet'>
+			<mass>5684.6</mass>
+			<satelite_quantity>65</satelite_quantity>
+		</planet>
+		<planet name='Uranus' type='Giant planet'>
+			<mass>868.10</mass>
+			<satelite_quantity>27</satelite_quantity>
+		</planet>
+		<planet name='Neptune' type='Giant planet' discovered='23 September 1846'>
+			<discoverer>Urbain Le Verrier, Johann Galle</discoverer>
+			<mass>1024.3</mass>
+			<satelite_quantity>14</satelite_quantity>
+		</planet>
+	</star>
+</galaxy>

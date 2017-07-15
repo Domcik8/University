@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Grafas" type="GrafoTipas">
+    <xs:key name="VirsunesRaktas">
+      <xs:selector xpath="Virsunes/Virsune"/>
+      <xs:field xpath="@Pav"/>
+    </xs:key>
+    <xs:key name="BriaunosRaktas">
+      <xs:selector xpath="Briaunos/Briauna"/>
+      <xs:field xpath="@Is"/>
+      <xs:field xpath="@I"/>
+    </xs:key>
+
+    <xs:keyref name="KeyRefIs" refer="VirsunesRaktas">
+      <xs:selector xpath="Briaunos/Briauna"/>
+      <xs:field xpath="@Is"/>
+    </xs:keyref>
+    
+    <xs:keyref name="KeyRefI" refer="VirsunesRaktas">
+      <xs:selector xpath="Briaunos/Briauna"/>
+      <xs:field xpath="@I"/>
+    </xs:keyref>
+
+  </xs:element>
+
+  <xs:complexType name="GrafoTipas">
+    <xs:sequence>
+      <xs:element name="Virsunes" type="VirsuniuTipas" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Briaunos" type="BriaunuTipas" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VirsuniuTipas">
+    <xs:sequence>
+      <xs:element name="Virsune" type="VirsunesTipas" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="BriaunuTipas">
+    <xs:sequence>
+      <xs:element name="Briauna" type="BriaunosTipas" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VirsunesTipas">
+    <xs:attribute name="Pav" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="BriaunosTipas">
+    <xs:attribute name="Is" type="xs:string"/>
+    <xs:attribute name="I" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>

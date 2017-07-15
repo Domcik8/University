@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Grafas 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema 5min.xsd">
+  <Virsunes>
+    <Virsune Pav="A"/>
+    <Virsune Pav="B"/>
+    <Virsune Pav="C"/>
+    <Virsune Pav="D"/>
+    <Virsune Pav="D"/>
+  </Virsunes>
+  <Briaunos>
+    <Briauna Is="A" I="B"/>
+    <Briauna Is="A" I="C"/>
+    <Briauna Is="C" I="B"/>
+    <Briauna Is="A" I="D"/>
+    <Briauna Is="D" I="B"/>
+    <Briauna Is="D" I="B"/>
+    <Briauna Is="E" I="B"/>
+  </Briaunos>
+</Grafas>
+

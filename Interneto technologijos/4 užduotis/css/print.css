@@ -1,0 +1,11 @@
+h1 {
+	display: none;
+}
+
+form{
+	display: none;
+}
+
+*{
+	border-style: none !important;
+}

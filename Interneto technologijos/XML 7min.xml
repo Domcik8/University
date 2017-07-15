@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<galaxy name='Milky Way' xmlns='galaxies' xmlns:st='starts' xmlns:pl='planets' xmlns:sa='satelite'>
+	<star_quantity>300000000000</star_quantity>
+	<star name='Sun'>
+		<st:mass>19885500</st:mass>
+		<st:planet_quantity>8</st:planet_quantity>
+		<pl:planet name='Mercury' type='Terrestrial planet'>
+			<pl:mass>3.3022</pl:mass>
+			<pl:satelite_quantity>0</pl:satelite_quantity>
+		</pl:planet>
+		<pl:planet name='Venus' type='Terrestrial planet'>
+			<pl:mass>48.676</pl:mass>
+			<pl:satelite_quantity>0</pl:satelite_quantity>
+		</pl:planet>
+		<pl:planet name='Earth' type='Terrestrial planet' population='7.3 billion'>
+			<pl:mass>59.7219</pl:mass>
+			<pl:satelite_quantity>1</pl:satelite_quantity>
+			<pl:continent_quantity>7</pl:continent_quantity>
+			<pl:continent name='Asia'></pl:continent>
+			<pl:continent name='Africa'></pl:continent>
+			<pl:continent name='North America'></pl:continent>
+			<pl:continent name='South America'></pl:continent>
+			<pl:continent name='Antarctica'></pl:continent>
+			<pl:continent name='Europe'></pl:continent>
+			<pl:continent name='Australia'></pl:continent>
+			<sa:satelite name='Moon'>
+				<sa:mass>0.73477</sa:mass>
+			</sa:satelite>
+		</pl:planet>
+		<pl:planet name='Mars' type='Terrestrial planet'>
+			<pl:mass>6.4185</pl:mass>
+			<pl:satelite_quantity>2</pl:satelite_quantity>
+		</pl:planet>
+		<pl:planet name='Jupiter' type='Giant planet'>
+			<pl:mass>18986</pl:mass>
+			<pl:satelite_quantity>67</pl:satelite_quantity>
+			<sa:satelite name='Io'>
+				<sa:mass>0.8931938</sa:mass>
+			</sa:satelite>
+			<sa:satelite name='Europa'>
+				<sa:mass>0.4799844</sa:mass>
+			</sa:satelite>
+			<sa:satelite name='Ganymede'>
+				<sa:mass>1.4819</sa:mass>
+			</sa:satelite>
+			<sa:satelite name='Callisto'>
+				<sa:mass>1.075938</sa:mass>
+			</sa:satelite>
+		</pl:planet>
+		<pl:planet name='Saturn' type='Giant planet'>
+			<pl:mass>5684.6</pl:mass>
+			<pl:satelite_quantity>65</pl:satelite_quantity>
+		</pl:planet>
+		<pl:planet name='Uranus' type='Giant planet'>
+			<pl:mass>868.10</pl:mass>
+			<pl:satelite_quantity>27</pl:satelite_quantity>
+		</pl:planet>
+		<pl:planet name='Neptune' type='Giant planet' discovered='23 September 1846'>
+			<pl:discoverer>Urbain Le Verrier, Johann Galle</pl:discoverer>
+			<pl:mass>1024.3</pl:mass>
+			<pl:satelite_quantity>14</pl:satelite_quantity>
+		</pl:planet>
+	</star>
+</galaxy>
