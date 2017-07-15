@@ -1,0 +1,5 @@
+C:\@HigLabo\HigLabo.Net\Bin\Debug\HigLabo.Net.WindowsPhone7.dll
+C:\@HigLabo\HigLabo.Net\Bin\Debug\HigLabo.Net.WindowsPhone7.pdb
+C:\@HigLabo\HigLabo.Net\obj\Debug\HigLabo.Net.WindowsPhone7.dll
+C:\@HigLabo\HigLabo.Net\obj\Debug\HigLabo.Net.WindowsPhone7.pdb
+C:\@HigLabo\HigLabo.Net\Bin\Debug\Newtonsoft.Json.WindowsPhone7.dll

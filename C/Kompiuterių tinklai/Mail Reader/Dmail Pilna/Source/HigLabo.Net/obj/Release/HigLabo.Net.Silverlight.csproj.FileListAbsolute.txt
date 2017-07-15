@@ -1,0 +1,16 @@
+C:\@HigLabo\HigLabo.Net\Bin\Release\HigLabo.Net.Silverlight.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\HigLabo.Net.Silverlight.pdb
+C:\@HigLabo\HigLabo.Net\Bin\Release\System.Xml.Linq.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\de\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\es\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\fr\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\it\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\ja\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\ko\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\ru\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\zh-Hans\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\Bin\Release\zh-Hant\System.Xml.Linq.resources.dll
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.Silverlight.dll
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.Silverlight.pdb
+C:\@HigLabo\HigLabo.Net\Bin\Release\Newtonsoft.Json.Silverlight.dll
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.Silverlight.csprojResolveAssemblyReference.cache

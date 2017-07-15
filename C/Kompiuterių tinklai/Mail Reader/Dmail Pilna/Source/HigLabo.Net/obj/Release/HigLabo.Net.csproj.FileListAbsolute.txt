@@ -1,0 +1,10 @@
+C:\@HigLabo\HigLabo.Net\bin\Release\HigLabo.Net.dll
+C:\@HigLabo\HigLabo.Net\bin\Release\HigLabo.Net.pdb
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.dll
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.pdb
+C:\@HigLabo\HigLabo.Net\bin\Release\Newtonsoft.Json.dll
+C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.csprojResolveAssemblyReference.cache
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Net\bin\Release\HigLabo.Net.dll
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Net\bin\Release\HigLabo.Net.pdb
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Net\obj\Release\HigLabo.Net.dll
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Net\obj\Release\HigLabo.Net.pdb

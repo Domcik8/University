@@ -1,0 +1,8 @@
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Net.dll
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dominik\Desktop\Dmail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\Dmail.main.csprojResolveAssemblyReference.cache
