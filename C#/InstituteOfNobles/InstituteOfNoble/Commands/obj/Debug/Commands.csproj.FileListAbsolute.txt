@@ -1,0 +1,9 @@
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Commands.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Commands.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\obj\Debug\Commands.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\obj\Debug\Commands.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\obj\Debug\Commands.csprojResolveAssemblyReference.cache
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Domain.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Repository.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Domain.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Commands\bin\Debug\Repository.pdb

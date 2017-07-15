@@ -1,0 +1,11 @@
+25	 Simulacijos laikas
+70   Lankytojo tikimybe
+3    Darbuotoju skaicius
+50   Kasos aparato kaina
+1    Maximalus cekio ismusimo laikas
+1    Maximalus pinigu paimimo laikas
+1    Maximalus prekiu padavimo laikas
+2    Maximalus prekiu sirinkimo laikas
+1    Maximalus prekiu surasimo laikas
+2    Maximalus priejimo prie kasininkes laikas
+2    Maximalus priekiu gavimo laikas
