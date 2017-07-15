@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="The_Game.AbstractDragon">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAAAAAAAAAAAABAAAAEAIAAEAAAAAAAIBEA=</HashCode>
+      <FileName>Base\AbstractDragon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Game.Decorator">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAAAFAQAAAAAAAAAAAADAAAAEAIgAEAAAAAAAIBEA=</HashCode>
+      <FileName>Decorator\Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Game.Dragon">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAAAAAAAAAgAABQBAAFAIAAGAAAAAAAIBEA=</HashCode>
+      <FileName>Base\Dragon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Game_Decorator.AirElementalDecorator">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorator\AirElementalDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Game_Decorator.FireElementalDecorator">
+    <Position X="1.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorator\FireElementalDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ed3a1601-3c06-42ea-a971-003bfcfe474b"
+  name="GPU"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="89ed5e36-a049-4890-825f-7aad3fc4c8a5"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DComputer.GPU"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="28026b40-2051-455e-b149-fa0122c59205"
+        name="IGPU"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="07d5e91c-4dbd-4de0-8f70-1f07842f26a8"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DIGPU"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a8e70333-78f0-4e6c-84d2-c655105bf7cc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="857f2e1e-8a30-4643-89df-23407e4564e1">
+                <propertyInstance
+                  Id="da2cc853-27c5-4a3c-a449-0728a8912f38"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="168c4a3e-7114-409e-a7e8-9484291b9700">
+                <propertyInstance
+                  Id="849a2168-aab8-4421-80bd-f960a48a0f77"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dd0baf8e-aa22-448c-ae90-f169d20c265d">
+                <propertyInstance
+                  Id="69dddc60-45b5-43fa-b7dc-27719a8302bd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5cdee465-df94-459c-a566-81f150e76efa">
+                <propertyInstance
+                  Id="2a6daab3-0bdf-44a0-ba88-71eca689a525"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="dc9b5a2d-265d-479b-b1f3-c58e6b48f0f8"
+            name="Start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8e621182-b87d-46a9-a6d5-693a62f7d4da"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DIGPU Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8f64b7e1-ba1c-403f-b65a-78537d3aafd3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1543bdd-c674-4743-afc4-aaf6858d6b04">
+                    <propertyInstance
+                      Id="7fef3868-4e7a-475e-a310-ccfce9a1d7ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcb43e70-ead8-427f-94e6-77834a73f1fa">
+                    <propertyInstance
+                      Id="c4fdf31f-c9f6-41c2-8ac0-94536a934c66"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5e14429-7421-4102-8171-2573f84b4796">
+                    <propertyInstance
+                      Id="b0d52553-3d25-4611-bd55-24a972d16522"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="688d48f2-173c-455a-8331-428646a3cca4">
+                    <propertyInstance
+                      Id="9383c5eb-7c07-44c4-9128-60ececa4698b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df054630-9a1a-4a57-b081-dc725e36a2ae">
+                    <propertyInstance
+                      Id="9c2fe4bc-586b-43c0-8290-046d525c2033"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45c0caf5-3fc8-4b05-b2b2-3ebfb274b0fa">
+                    <propertyInstance
+                      Id="41375fc3-0ecb-4842-8c07-be8dc1605145"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f5ccdffc-6e99-4fc0-95a7-ad4b73254bc3"
+            name="Display"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="84de348d-8cc1-4a4e-8ffd-2659519d178e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DIGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1257d5a5-9c69-470d-9520-31bbc40e47b2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfed694d-00f3-4ea6-838b-7eacb4bf6417">
+                    <propertyInstance
+                      Id="f717ca63-151f-4939-9c8e-05b47f012714"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e198bb47-77d0-4980-b799-408abaedd7cf">
+                    <propertyInstance
+                      Id="ee4a49a0-cdd6-479d-a1d6-2e78e79dd96f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f93f05bd-53b2-4719-88d3-c1dd0bce2a27">
+                    <propertyInstance
+                      Id="3baaaab7-7d9d-45b3-91fd-49bb3e71403a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5480c788-11d4-45b0-994f-1e5c7f6a0f6b">
+                    <propertyInstance
+                      Id="9b423973-0022-484a-bf52-3a8c0b898234"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03363572-252a-4f01-b038-199a057e985c">
+                    <propertyInstance
+                      Id="64749fd6-6276-46c2-9786-df5921c8d824"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ea95d49-64ef-482d-bd51-34f3728a82b5">
+                    <propertyInstance
+                      Id="24f11e81-f1a3-434d-b73b-07b886b26e68"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="616c3acd-0255-4c82-bbc4-11b049c39cc5"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="af8365c4-160a-491f-9107-13e2eb390808"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DIGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2c3f59ea-7753-4517-ae2f-9375a7a92f64"
+            name="ShutDown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f74b7e3b-1cd1-476d-8d5b-72cfa59bce6b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DIGPU Member%3DShutDown"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b7fc74a8-f5c5-40fc-be92-0d9712768f28"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="778f2ae8-d336-4d01-ad26-10ba6e2706ff">
+                    <propertyInstance
+                      Id="5511cc5e-036e-4e3a-ba6c-afc273db0269"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e3ce30f-abc5-4ebc-9908-6318209c5eff">
+                    <propertyInstance
+                      Id="1092e2e9-5eff-4c8b-bbf0-b882c666d214"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee75e8c5-984d-41bd-81a5-11a2609e8057">
+                    <propertyInstance
+                      Id="1e17714c-074c-4152-8098-d72506861b66"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9aaef37-224f-485a-ac4b-0063d0df8e5e">
+                    <propertyInstance
+                      Id="5c02c4f0-c0e0-4cc8-85c4-1af0519a640b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="957fbfae-5052-4928-970b-28ab43ce8d31">
+                    <propertyInstance
+                      Id="8c732e2a-4b0f-4903-9880-1eeffcc826ea"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ad3ec33-b2ca-416c-87d1-6766065f4d73">
+                    <propertyInstance
+                      Id="64ef52b1-f379-4055-bd9d-8037c38067fc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7b8d4eb4-d6f6-41d1-a4d6-981036d5e490"
+        name="NewGPU"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="19729f33-067d-432e-ab36-2050f1fdd0cd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3d3c9768-2274-4544-a24e-993ba9a5a5e4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3cdd6217-d8e3-4e2b-a33a-23b4922ece00">
+                <propertyInstance
+                  Id="4238fad3-cce5-4d23-810e-64620119aa82"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2edce88-216b-45a1-8737-c5d66452e16c">
+                <propertyInstance
+                  Id="d88d864b-8ab4-4d8f-b151-6a453380c912"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2710654e-6a01-4083-9445-3cc20226b19d">
+                <propertyInstance
+                  Id="93a2b590-d9de-4d41-8988-835b2bc62453"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a90a5f16-275b-4257-a41d-51bf2035ab65">
+                <propertyInstance
+                  Id="f580678b-0d3f-49b3-b72b-7ed848d9525c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43079ef5-609a-4c5f-9bcc-a520716e9c69">
+                <propertyInstance
+                  Id="e748eece-8e1c-4d82-b046-8f86255fa920"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d49b0efc-9698-40de-8715-b2cff50cac15">
+            <interfaceMoniker
+              Id="28026b40-2051-455e-b149-fa0122c59205"
+              LastKnownName="IGPU"
+              LastKnownLocation="Package5_1212.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="13ee57ec-1f87-4172-b209-195043b26f79"
+            name="Start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="15554e88-fc00-4035-9c63-1f14488ebabe"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="86662360-d71e-4acf-83dd-f3b3f077be6c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65659f40-5efe-4bb5-af16-84914b3fd0b3">
+                    <propertyInstance
+                      Id="f0bb7a6a-6174-45b5-a386-769b649d2e15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57b847a2-ca2c-4ab5-8273-e66ae8c831e5">
+                    <propertyInstance
+                      Id="12a3f562-d852-4863-aef6-f5539126c3cf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc366d3f-bac8-4c31-8d0d-58a695f66be8">
+                    <propertyInstance
+                      Id="a263bdc5-3ca2-4e5a-bfba-53a2cb92430a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86fd9a34-061a-4f71-bd21-ec429baf9fa5">
+                    <propertyInstance
+                      Id="008feae0-a804-48e7-b3ca-0464e7273831"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fcce1f4-cd94-4b11-8388-1a1c67a7e67a">
+                    <propertyInstance
+                      Id="d17af2d9-c156-4137-bd5f-3b0b41ae631c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec4cb547-d989-42b2-9f7a-3f0a3a91dedb">
+                    <propertyInstance
+                      Id="dd88ad5c-0fd2-4d43-bfa2-751344adf184"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="1efff449-ba23-42da-bcc0-2f25cb9fb532"
+            name="Display"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="60b9f9a3-5c3e-4701-9214-d34590b87377"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="615b0814-bbbc-40a4-8c6d-0b208e3ad08a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8b994f5-3969-4d8f-b024-a8dd028307ea">
+                    <propertyInstance
+                      Id="f3b17b22-f810-453b-9685-be4da9095077"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5713d107-12c0-4820-98d4-11b305b333b0">
+                    <propertyInstance
+                      Id="985c5891-817b-4da5-96b6-e87b113e9da0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6292c7f-2351-41bc-85da-0be0a2b4c4f1">
+                    <propertyInstance
+                      Id="318f6b3a-cee4-42ef-99d3-3a4c5f250f4b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef8e577c-78c6-4390-b7a2-2c3284e8cdd1">
+                    <propertyInstance
+                      Id="5e6542dd-daac-4708-9322-fb773d0aab43"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43ee648f-71a7-48a8-b995-4cb424c25b1e">
+                    <propertyInstance
+                      Id="24875332-5539-4e81-915f-809cdb928a52"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e61c90b4-27d2-488f-88ae-3547269f7ff7">
+                    <propertyInstance
+                      Id="7610b827-1bb1-4477-a369-1c1d7b7a60d9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="581f1a08-928b-4fa1-9f1d-a71abec1a5c9"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7ea0dad7-4309-43a6-a0c3-1c0c8a99e961"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ca800a12-cc76-4ea1-bd54-a24db1ee79bc"
+            name="ShutDown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a3a2fc18-faf6-47e5-b0bf-5d8f50712776"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3DShutDown"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bf744537-1c60-44cf-97d1-c5b9476a4ef2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14669a6a-0149-4330-ba09-10bf1c0f5c90">
+                    <propertyInstance
+                      Id="7e94358d-5e1b-44e9-a815-29d230fb436c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45ad7688-335b-4f29-bcc1-c28bd4744fec">
+                    <propertyInstance
+                      Id="c2d9b53d-268a-42c0-b72f-78e350925b87"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3aa5aae-c027-48aa-a5d6-f8fc9c186147">
+                    <propertyInstance
+                      Id="43ca5fbb-77c5-4e82-b54b-6bbc67b72cde"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c07ca66-454a-4f2d-8341-0b9851f632cf">
+                    <propertyInstance
+                      Id="9f334892-7d1a-4621-adcf-a87bbe6130e4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac801206-a56a-4116-81c1-a6f21554461e">
+                    <propertyInstance
+                      Id="a34a2ad3-20ab-4847-968e-603518d95b58"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b0f6cf6-20dd-47c1-8eb6-dce1ec3dd9ce">
+                    <propertyInstance
+                      Id="b7861f2a-77fb-4f22-9b3a-ea3bc916c03e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="87abf0a0-b32a-4137-8c65-7d6b02ef0741"
+            name="Waiting"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="be482c03-44e9-47ef-9d1d-1191ca612d12"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3D(Name%3DWaiting OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e91aa6ca-97b8-4edc-9003-b079a6fdb429"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b20fb47-3867-40ab-b09f-c0900040b5a4">
+                    <propertyInstance
+                      Id="c37f0dc4-cf85-459c-8d4f-860176cc864f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8428dd8b-537d-46dc-a37b-211d32c360ae">
+                    <propertyInstance
+                      Id="1075420c-4e8e-4333-80b2-5b92260e6fab"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d04f41e8-0988-4b58-8a58-eb6671b82241">
+                    <propertyInstance
+                      Id="8245ff54-3bc5-4c11-8f46-d0c02f6ec933"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f7b0fb0-0bc6-4b9c-ba68-958d70373ebf">
+                    <propertyInstance
+                      Id="00b7ec0c-8716-40dd-b009-d648f8d7cae9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e16f92ef-7a67-4d67-b6ea-80a08690517f">
+                    <propertyInstance
+                      Id="fdd071fa-c783-42c5-933d-9a0c8e81d2c4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9dafbc88-698d-4af7-bf7e-5c90057ef706">
+                    <propertyInstance
+                      Id="43cee1fb-960a-4f44-9a80-a98b437640be"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d321305-6056-4159-8fdf-0c7ece2ff699"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d85959d6-6278-45b3-b12d-0aee0e2c61ba"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3D(Name%3DWaiting OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="678be7ad-db51-4740-9a63-d457b87cda7e"
+            name="NewGPU"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d5d3b201-aa04-4657-be57-65bc7b3e1dc1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DNewGPU Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa0ba405-897e-4db2-be7c-b5d369df566b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbacb731-f3b1-4aa0-8949-34bc92ba5257">
+                    <propertyInstance
+                      Id="087fd0f1-c78c-49d7-a89a-c723cf284583"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e69b3b0-82c9-4f38-8eec-04f9b078fb1e">
+                    <propertyInstance
+                      Id="e56251c3-c5e0-43df-9b29-b7cc5228a377"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="515ae383-0f4c-4fd8-bdbc-c9a633351175">
+                    <propertyInstance
+                      Id="705be027-cd15-40ae-988b-7fbed634a7e4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f07c37e-9f4b-4c8d-afc4-21be088f1a3f">
+                    <propertyInstance
+                      Id="d3434d28-6a25-40e7-9c4e-a01989e474f6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c44c8628-6224-40bd-9a1f-a52b3ba35bcb">
+                    <propertyInstance
+                      Id="386fea30-c4f2-4eba-8a47-dbbd757682fc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="484c3805-3acf-4a1e-a53d-9a91320a38c2">
+                    <propertyInstance
+                      Id="a5ebb1ac-619f-4c3d-98ae-eb5aa535a77d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="04dbb29e-f96d-4c56-b452-a38a77655c10"
+        name="OldGPU"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="35632c7f-a258-4b28-b2a2-a04ea4e98337"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="afe405ac-9b85-42d5-8cb6-7183cd39acb0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="672fb17f-fa31-4af8-9784-d8fd303aee1c">
+                <propertyInstance
+                  Id="8ba867ef-452c-4ba2-be20-e5944ae2101f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="178d56f4-7c52-4406-b3cc-edbc87bd4722">
+                <propertyInstance
+                  Id="19330768-62bf-4c2e-a03d-20ffe0b5c484"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3e1c0c8e-9aa9-45a4-9a54-c966f9938dde">
+                <propertyInstance
+                  Id="d619d3fa-232e-4720-b715-4385a923fb72"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd21252d-a24f-4047-8014-9509468f893b">
+                <propertyInstance
+                  Id="63f03d76-0258-43d4-b14d-8f4c89a825c8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d02cc770-c5c1-41ef-adbe-a030a958d26c">
+                <propertyInstance
+                  Id="62742a78-9a8a-4dd3-97a2-31e232f11e84"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a578cd99-48b9-472f-bff0-2a626cd998dc">
+            <interfaceMoniker
+              Id="28026b40-2051-455e-b149-fa0122c59205"
+              LastKnownName="IGPU"
+              LastKnownLocation="Package5_1212.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5e3b3f22-2151-47ab-a240-744f5f1f3f32"
+            name="Start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b34f2984-048b-451f-8718-80c38078fa8c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8b9e7b89-c7e7-4bd8-8633-6802989f582c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af786112-952e-4bec-bade-fb7f39c017e3">
+                    <propertyInstance
+                      Id="de2217a1-899e-47b9-9fca-38b4e09428a2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7725113a-5c62-4b6a-bcaa-ec79eb79676c">
+                    <propertyInstance
+                      Id="aa13f5fb-f9d2-4a95-a2f5-5bcfe3cba888"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2aa0bf19-5450-4852-bd8f-839ba9440168">
+                    <propertyInstance
+                      Id="f3a9f74c-66fe-4e62-b698-c9546824c753"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6ff1842-1bf5-4cff-85b8-c123603cbf3d">
+                    <propertyInstance
+                      Id="6d3df794-b8b9-4dd6-b376-7250fc02825c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="858d251d-7425-46cc-b300-2cbd058f5495">
+                    <propertyInstance
+                      Id="3b4ad341-52aa-4e6d-be0c-e3a4f8c44afe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f5e4f1f-9227-49b9-89c2-097b5ae5d155">
+                    <propertyInstance
+                      Id="1a35a7f6-7703-47d1-a67f-d7c626f72e6c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="d551688f-3bd2-4626-983c-42d1c8d27de0"
+            name="Display"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2e97307f-23e2-4829-b648-6643330654f3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bfb8469c-f9fd-4560-84c7-72128dfd850b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36bfd736-6caa-4063-80f7-a2561c767648">
+                    <propertyInstance
+                      Id="da297201-fbea-4d0c-85f6-7a1c08d2f4e0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e043d60b-2046-4501-9b3a-c709e46c1ee6">
+                    <propertyInstance
+                      Id="3fd84722-f3ac-4ba1-9a36-7ca507a647a8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f93737a5-773e-49c0-921b-4928faa0e39b">
+                    <propertyInstance
+                      Id="455bd259-c095-4c32-8bcc-7fdaf0797c5c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e771366d-4f85-4075-9cd0-5fffc22564b3">
+                    <propertyInstance
+                      Id="cf40944c-770c-49d5-a5b6-17b95224d081"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0140c67b-bfa4-4ad1-923b-2d9e4184e580">
+                    <propertyInstance
+                      Id="ebc01431-e177-4849-888d-fbb1254ec455"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6671c84d-20c4-4fbd-b80e-545bfa52385b">
+                    <propertyInstance
+                      Id="736caf45-6891-4da6-bf82-e3c286401f57"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dac34f57-65a6-4c97-b73e-cb4ebe7a6b88"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5ea145b4-7d18-46ed-b3b4-2470c0c8b21f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3D(Name%3DDisplay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f4ba8c87-50fd-49a8-a8d7-5098805fac00"
+            name="ShutDown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9e87e818-94a9-47bd-b423-15f91f8db0ad"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3DShutDown"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2514ddbe-a858-4e76-970f-8aafbbb478e3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dba0aa4c-21f2-49a1-b02d-76d7ad650344">
+                    <propertyInstance
+                      Id="9691a32b-b292-465b-84aa-e63a79b47687"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73f935ed-9b97-4907-9b67-e2204f4d3259">
+                    <propertyInstance
+                      Id="cc10a601-8bd9-4463-9e78-9325e937e228"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b403fe8-a2cb-4fc7-badc-762f480a9b5e">
+                    <propertyInstance
+                      Id="dcd08b8f-8fdd-4987-ac5e-72d3b9b48587"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="033b50f9-6a91-4d4b-ae99-82f4b85fff80">
+                    <propertyInstance
+                      Id="edf79686-dc34-4ac2-9cce-4bea60a72522"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e4beab8-d73f-4323-9173-073ebc73d9e9">
+                    <propertyInstance
+                      Id="41f8f59f-95b5-4406-8568-a7661c4c6a2b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2399dcdb-1c77-46cf-b0f5-c6f5d01e2b88">
+                    <propertyInstance
+                      Id="48e6c316-a206-432a-a5a3-dbd26f34d2c5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="1b246485-0d65-4290-8e2f-ba75900a2c08"
+            name="Waiting"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="37a9fe88-70a3-484c-a1c1-2e899d1629a2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3D(Name%3DWaiting OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="edb324bb-095f-4e32-afd5-5c8ab7ff259a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="831a18c2-79cf-4b4a-9d96-e657161ce12d">
+                    <propertyInstance
+                      Id="f3d6ed0d-1d88-45a9-b3c2-ca1aec8244d3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da7302c2-f670-4ba6-a610-18f40630a396">
+                    <propertyInstance
+                      Id="4d4e41b6-9275-45a1-af67-afe3a4c25908"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d32ec7a3-abe5-4d1f-b845-10590ee00572">
+                    <propertyInstance
+                      Id="db4b34d7-a78a-4c21-9c27-5db8dd46a9c1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db48b796-8236-4e75-805c-e0aecc2223ec">
+                    <propertyInstance
+                      Id="97858e07-e1c3-4ab6-ade9-c60bb068f028"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3857a220-20c4-44ef-9416-1ed74cdf0a32">
+                    <propertyInstance
+                      Id="643458f4-042f-42e5-b7f4-7d15c3aa34e5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88dae417-29fd-4109-b7df-4251f0faddb4">
+                    <propertyInstance
+                      Id="77c1ad7b-f994-4280-95d3-7da8996b10b6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5fc96e15-6aa6-4d55-aab4-05c728918414"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5f339398-ef10-49a8-b639-dc73b80e5e20"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3D(Name%3DWaiting OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="61732095-0fe6-48bd-8846-0f7c4792913c"
+            name="OldGPU"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2589ba53-b56d-425b-985c-2f37b06f9ef2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDominik%2FDesktop%2FComputer%2FComputer%2Fbin%2FDebug%2FComputer.exe Namespace%3DComputer.GPU Type%3DOldGPU Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="406ae896-22ae-493c-aea6-884c7b309195"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="230452bc-8c9a-48dd-b365-3ab48f1dd049">
+                    <propertyInstance
+                      Id="464ac003-bd9c-4b8f-a19c-17a92bd117d1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="803bc301-930e-4de8-a30c-c549e8794b33">
+                    <propertyInstance
+                      Id="55d05618-8318-4822-a58b-f851fa18a9a8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8308fe71-3a36-489c-8bd3-ab8f4b52434b">
+                    <propertyInstance
+                      Id="775eca7b-f7d3-466c-b829-87e54f09c0e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7962aec-2bd2-4bf6-8d51-823b003d75ef">
+                    <propertyInstance
+                      Id="47f8bc04-be20-4e32-98fc-9d359509e104"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4575d82f-5c0a-4397-a25c-aa5f553fd8fd">
+                    <propertyInstance
+                      Id="ef283708-3e9a-4453-8d4e-d2f2bd1071d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df53893b-3e2d-4ff9-8994-acc017d2f878">
+                    <propertyInstance
+                      Id="4cd0b896-19b6-437f-96e4-a5333ecc6871"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

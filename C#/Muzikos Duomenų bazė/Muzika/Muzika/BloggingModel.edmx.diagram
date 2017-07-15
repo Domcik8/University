@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="596135195c5840b0a79c310cde34eb5f" Name="Diagram1" ZoomLevel="142" >
+        <EntityTypeShape EntityType="BloggingModel.Atlikejas" Width="1.5" PointX="6.5" PointY="3.625" />
+        <EntityTypeShape EntityType="BloggingModel.Albumas" Width="1.5" PointX="8.625" PointY="3.375" />
+        <EntityTypeShape EntityType="BloggingModel.Autorius" Width="1.5" PointX="14.875" PointY="3.875" />
+        <EntityTypeShape EntityType="BloggingModel.Daina" Width="1.5" PointX="12.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloggingModel.Priklauso" Width="1.5" PointX="10.625" PointY="3.5" />
+        <AssociationConnector Association="BloggingModel.AtlikejasAlbumas" />
+        <AssociationConnector Association="BloggingModel.DainaAutorius" />
+        <AssociationConnector Association="BloggingModel.AlbumasPriklauso" />
+        <AssociationConnector Association="BloggingModel.PriklausoDaina" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,10 @@
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\Database.dll.config
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\Database.dll
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\Database.pdb
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\EntityFramework.dll
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\EntityFramework.SqlServer.dll
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\EntityFramework.xml
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\bin\Debug\EntityFramework.SqlServer.xml
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\obj\Debug\Database.dll
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\obj\Debug\Database.pdb
+d:\Documents\Visual Studio 2013\Projects\SSS\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache

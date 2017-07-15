@@ -1,0 +1,7 @@
+Indu plovimas       0 0 1
+Statyba             1 0 0
+Nueiti i kirpikla   0 1 0
+Apsipirkti          1 1 0
+Boulingas           1 0 1
+Sokiai              0 1 1
+Langu plovimas      1 1 1

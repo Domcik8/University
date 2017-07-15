@@ -1,0 +1,9 @@
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\bin\Debug\PSPuzd2.exe.config
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\obj\Debug\PSPuzd2.exe
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\obj\Debug\PSPuzd2.pdb
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\obj\Debug\RPG Decorator.csprojResolveAssemblyReference.cache
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\bin\Debug\PSPuzd2.exe
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\PSPuzd2\bin\Debug\PSPuzd2.pdb
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\Tomas\PSPuzd2\bin\Debug\PSPuzd2.exe.config
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\Tomas\PSPuzd2\obj\Debug\PSPuzd2.exe
+C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\Tomas\PSPuzd2\obj\Debug\PSPuzd2.pdb

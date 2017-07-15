@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BloggingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BloggingModelStoreContainer">
+    <EntitySet Name="Atlikejai" EntityType="BloggingModel.Store.Atlikejai" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Albumai" EntityType="BloggingModel.Store.Albumai" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Autoriai" EntityType="BloggingModel.Store.Autoriai" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dainos" EntityType="BloggingModel.Store.Dainos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Priklausantys" EntityType="BloggingModel.Store.Priklausantys" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AtlikejasAlbumas" Association="BloggingModel.Store.AtlikejasAlbumas">
+      <End Role="Atlikejas" EntitySet="Atlikejai" />
+      <End Role="Albumas" EntitySet="Albumai" />
+    </AssociationSet>
+    <AssociationSet Name="DainaAutorius" Association="BloggingModel.Store.DainaAutorius">
+      <End Role="Daina" EntitySet="Dainos" />
+      <End Role="Autorius" EntitySet="Autoriai" />
+    </AssociationSet>
+    <AssociationSet Name="AlbumasPriklauso" Association="BloggingModel.Store.AlbumasPriklauso">
+      <End Role="Priklauso" EntitySet="Priklausantys" />
+      <End Role="Albumas" EntitySet="Albumai" />
+    </AssociationSet>
+    <AssociationSet Name="PriklausoDaina" Association="BloggingModel.Store.PriklausoDaina">
+      <End Role="Priklauso" EntitySet="Priklausantys" />
+      <End Role="Daina" EntitySet="Dainos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Atlikejai">
+    <Key>
+      <PropertyRef Name="Slapyvardis" />
+    </Key>
+    <Property Name="Slapyvardis" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="Karjeros_pradzia" Type="int" Nullable="true" />
+    <Property Name="Tautybe" Type="nvarchar" Nullable="true" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Albumai">
+    <Key>
+      <PropertyRef Name="Pavadinimas" />
+    </Key>
+    <Property Name="Pavadinimas" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Turinis_Min" Type="float" Nullable="true" />
+    <Property Name="Atlikejas" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Autoriai">
+    <Key>
+      <PropertyRef Name="Nr" />
+    </Key>
+    <Property Name="Nr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Slapyvardis" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Tautybe" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="Karjeros_pradzia" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Dainos">
+    <Key>
+      <PropertyRef Name="Pavadinimas" />
+    </Key>
+    <Property Name="Pavadinimas" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Trukme_Min" Type="float" Nullable="true" />
+    <Property Name="Zanras" Type="nvarchar" Nullable="false" DefaultValue="Nenustatyta" MaxLength="15" />
+    <Property Name="Autorius" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Priklausantys">
+    <Key>
+      <PropertyRef Name="PriklausoNr" />
+    </Key>
+    <Property Name="PriklausoNr" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Albumo_Pavadinimas" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="Dainos_Pavadinimas" Type="nvarchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <Association Name="AtlikejasAlbumas">
+    <End Role="Atlikejas" Type="BloggingModel.Store.Atlikejai" Multiplicity="1" />
+    <End Role="Albumas" Type="BloggingModel.Store.Albumai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Atlikejas">
+        <PropertyRef Name="Slapyvardis" />
+      </Principal>
+      <Dependent Role="Albumas">
+        <PropertyRef Name="Atlikejas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DainaAutorius">
+    <End Role="Daina" Type="BloggingModel.Store.Dainos" Multiplicity="*" />
+    <End Role="Autorius" Type="BloggingModel.Store.Autoriai" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Autorius">
+        <PropertyRef Name="Nr" />
+      </Principal>
+      <Dependent Role="Daina">
+        <PropertyRef Name="Autorius" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AlbumasPriklauso">
+    <End Role="Priklauso" Type="BloggingModel.Store.Priklausantys" Multiplicity="*" />
+    <End Role="Albumas" Type="BloggingModel.Store.Albumai" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Albumas">
+        <PropertyRef Name="Pavadinimas" />
+      </Principal>
+      <Dependent Role="Priklauso">
+        <PropertyRef Name="Albumo_Pavadinimas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PriklausoDaina">
+    <End Role="Priklauso" Type="BloggingModel.Store.Priklausantys" Multiplicity="*" />
+    <End Role="Daina" Type="BloggingModel.Store.Dainos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Daina">
+        <PropertyRef Name="Pavadinimas" />
+      </Principal>
+      <Dependent Role="Priklauso">
+        <PropertyRef Name="Dainos_Pavadinimas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BloggingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BloggingContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Atlikejai" EntityType="BloggingModel.Atlikejas" />
+          <EntitySet Name="Albumai" EntityType="BloggingModel.Albumas" />
+          <EntitySet Name="Autoriai" EntityType="BloggingModel.Autorius" />
+          <EntitySet Name="Dainos" EntityType="BloggingModel.Daina" />
+          <EntitySet Name="Priklausantys" EntityType="BloggingModel.Priklauso" />
+          <AssociationSet Name="AtlikejasAlbumas" Association="BloggingModel.AtlikejasAlbumas">
+            <End Role="Atlikejas" EntitySet="Atlikejai" />
+            <End Role="Albumas" EntitySet="Albumai" />
+          </AssociationSet>
+          <AssociationSet Name="DainaAutorius" Association="BloggingModel.DainaAutorius">
+            <End Role="Daina" EntitySet="Dainos" />
+            <End Role="Autorius" EntitySet="Autoriai" />
+          </AssociationSet>
+          <AssociationSet Name="AlbumasPriklauso" Association="BloggingModel.AlbumasPriklauso">
+            <End Role="Priklauso" EntitySet="Priklausantys" />
+            <End Role="Albumas" EntitySet="Albumai" />
+          </AssociationSet>
+          <AssociationSet Name="PriklausoDaina" Association="BloggingModel.PriklausoDaina">
+            <End Role="Priklauso" EntitySet="Priklausantys" />
+            <End Role="Daina" EntitySet="Dainos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Atlikejas">
+          <Key>
+            <PropertyRef Name="Slapyvardis" />
+          </Key>
+          <Property Name="Slapyvardis" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="15" />
+          <Property Name="Karjeros_pradzia" Type="Int32" Nullable="true" />
+          <Property Name="Tautybe" Type="String" Nullable="true" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Albumas">
+          <Key>
+            <PropertyRef Name="Pavadinimas" />
+          </Key>
+          <Property Name="Pavadinimas" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="25" />
+          <Property Name="Turinis_Min" Type="Double" Nullable="true" />
+          <NavigationProperty Name="OAtlikejas" Relationship="BloggingModel.AtlikejasAlbumas" FromRole="Albumas" ToRole="Atlikejas" />
+          <Property Name="Atlikejas" Type="String" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Autorius">
+          <Key>
+            <PropertyRef Name="Nr" />
+          </Key>
+          <Property Name="Nr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Slapyvardis" Type="String" Nullable="false" MaxLength="25" />
+          <Property Name="Tautybe" Type="String" Nullable="true" ConcurrencyMode="Fixed" MaxLength="10" />
+          <Property Name="Karjeros_pradzia" Type="Int32" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Daina">
+          <Key>
+            <PropertyRef Name="Pavadinimas" />
+          </Key>
+          <Property Name="Pavadinimas" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="25" />
+          <Property Name="Trukme_Min" Type="Double" Nullable="true" />
+          <Property Name="Zanras" Type="String" Nullable="false" MaxLength="15" DefaultValue="Nenustatyta" />
+          <NavigationProperty Name="OAutorius" Relationship="BloggingModel.DainaAutorius" FromRole="Daina" ToRole="Autorius" />
+          <Property Name="Autorius" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Priklauso">
+          <Key>
+            <PropertyRef Name="PriklausoNr" />
+          </Key>
+          <Property Name="PriklausoNr" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="OAlbumas" Relationship="BloggingModel.AlbumasPriklauso" FromRole="Priklauso" ToRole="Albumas" />
+          <Property Name="Albumo_Pavadinimas" Type="String" Nullable="false" MaxLength="25" />
+          <NavigationProperty Name="ODaina" Relationship="BloggingModel.PriklausoDaina" FromRole="Priklauso" ToRole="Daina" />
+          <Property Name="Dainos_Pavadinimas" Type="String" Nullable="false" MaxLength="25" />
+        </EntityType>
+        <Association Name="AtlikejasAlbumas">
+          <End Type="BloggingModel.Atlikejas" Role="Atlikejas" Multiplicity="1" />
+          <End Type="BloggingModel.Albumas" Role="Albumas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atlikejas">
+              <PropertyRef Name="Slapyvardis" />
+            </Principal>
+            <Dependent Role="Albumas">
+              <PropertyRef Name="Atlikejas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DainaAutorius">
+          <End Type="BloggingModel.Daina" Role="Daina" Multiplicity="*" />
+          <End Type="BloggingModel.Autorius" Role="Autorius" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Autorius">
+              <PropertyRef Name="Nr" />
+            </Principal>
+            <Dependent Role="Daina">
+              <PropertyRef Name="Autorius" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AlbumasPriklauso">
+          <End Type="BloggingModel.Priklauso" Role="Priklauso" Multiplicity="*" />
+          <End Type="BloggingModel.Albumas" Role="Albumas" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Albumas">
+              <PropertyRef Name="Pavadinimas" />
+            </Principal>
+            <Dependent Role="Priklauso">
+              <PropertyRef Name="Albumo_Pavadinimas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PriklausoDaina">
+          <End Type="BloggingModel.Priklauso" Role="Priklauso" Multiplicity="*" />
+          <End Type="BloggingModel.Daina" Role="Daina" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Daina">
+              <PropertyRef Name="Pavadinimas" />
+            </Principal>
+            <Dependent Role="Priklauso">
+              <PropertyRef Name="Dainos_Pavadinimas" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BloggingModelStoreContainer" CdmEntityContainer="BloggingContext">
+    <EntitySetMapping Name="Atlikejai">
+      <EntityTypeMapping TypeName="IsTypeOf(BloggingModel.Atlikejas)">
+        <MappingFragment StoreEntitySet="Atlikejai">
+          <ScalarProperty Name="Slapyvardis" ColumnName="Slapyvardis" />
+          <ScalarProperty Name="Karjeros_pradzia" ColumnName="Karjeros_pradzia" />
+          <ScalarProperty Name="Tautybe" ColumnName="Tautybe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albumai">
+      <EntityTypeMapping TypeName="IsTypeOf(BloggingModel.Albumas)">
+        <MappingFragment StoreEntitySet="Albumai">
+          <ScalarProperty Name="Pavadinimas" ColumnName="Pavadinimas" />
+          <ScalarProperty Name="Turinis_Min" ColumnName="Turinis_Min" />
+          <ScalarProperty Name="Atlikejas" ColumnName="Atlikejas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autoriai">
+      <EntityTypeMapping TypeName="IsTypeOf(BloggingModel.Autorius)">
+        <MappingFragment StoreEntitySet="Autoriai">
+          <ScalarProperty Name="Nr" ColumnName="Nr" />
+          <ScalarProperty Name="Slapyvardis" ColumnName="Slapyvardis" />
+          <ScalarProperty Name="Tautybe" ColumnName="Tautybe" />
+          <ScalarProperty Name="Karjeros_pradzia" ColumnName="Karjeros_pradzia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dainos">
+      <EntityTypeMapping TypeName="IsTypeOf(BloggingModel.Daina)">
+        <MappingFragment StoreEntitySet="Dainos">
+          <ScalarProperty Name="Pavadinimas" ColumnName="Pavadinimas" />
+          <ScalarProperty Name="Trukme_Min" ColumnName="Trukme_Min" />
+          <ScalarProperty Name="Zanras" ColumnName="Zanras" />
+          <ScalarProperty Name="Autorius" ColumnName="Autorius" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Priklausantys">
+      <EntityTypeMapping TypeName="IsTypeOf(BloggingModel.Priklauso)">
+        <MappingFragment StoreEntitySet="Priklausantys">
+          <ScalarProperty Name="PriklausoNr" ColumnName="PriklausoNr" />
+          <ScalarProperty Name="Albumo_Pavadinimas" ColumnName="Albumo_Pavadinimas" />
+          <ScalarProperty Name="Dainos_Pavadinimas" ColumnName="Dainos_Pavadinimas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

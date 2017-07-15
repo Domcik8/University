@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Interneto technologijos</title>
+		<link rel="stylesheet"
+			href="css/style.css" type="text/css">
+		<link rel="stylesheet" type="text/css" 
+			href="css/print.css" media="print">
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="myscripts.js"></script>
+		
+	</head>
+	<body>
+		<h1><em>Bakalauro diplomai</em></h1>
+		<ul id="senasDiplomas">
+			<li>Laipsnis: <a><em>Programų Sistemų</em> Bakalauro diplomas</a></li>
+			<li>Vardas, Pavardė: <a id='vp'>Dominik Gabriel Lisovski</a></li>
+			<li id="a2">Amžius: <a id="a1">21</a>
+			<li>Mokslų pabaigos data: <a class="data ateitis">2017-07-22</a></li>
+			<li>Autoriaus tel. numeris: <a id="nr1">867177364</a></li>
+			<li class='vieta'>Mokymosi vieta:
+				<ol>
+					<li><a id="mv1"><b>Vilnius, <em>Baltupiai</em></b></a></li>
+					<li><a id="mv2"><b>Vilnius, <em>Naugadukas</em></b></a></li>
+				</ol>
+			</li>
+			<li>Mokslų pradžios data: <a class="data">2013-08-01</a></li>
+		</ul>
+		<h1><em>Naujas diplomas</em></h1>
+		<form name="ivedimoForma">
+				Vardas: <input type="text" name="fname" id="fvp1"><br>
+				Pavardė: <input type="text" name="lname" id="fvp2"><br>
+				Amžius: <input type="number" name="age" id="fa"><br>
+				Mokslų pabaigos data: metai <input type="text" name="date" id="fy">
+				menuo <input type="text" name="date" id="fm">
+				diena <input type="text" name="date" id="fd">
+				<br>
+				Autoriaus tel. numeris: <input type="number" name="num" id="fn"><br>
+				<input type="button" value="Sukurti" onclick="createNewDocument()"><br>
+				<input type="button" value="Pasliepti asmeninius duomenis" id="nrbox1" onclick="Hide()"><br>
+				<input type="button" value="Nupirkti diplomą" id="illegal1" onclick="illegal()"><br>
+		</form>
+	</body>
+</html>

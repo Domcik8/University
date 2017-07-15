@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Skaiciai 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema 6min.xsd">
+  <Skaicius>
+    <Param>2</Param>
+  </Skaicius>
+  
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>+</Operator>
+    <Param>5</Param>
+  </Skaicius>
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>*</Operator>
+    <Param>5</Param>
+  </Skaicius>
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>*</Operator>
+    <Param>5</Param>
+  </Skaicius>
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>-</Operator>
+    <Param>5</Param>
+  </Skaicius>
+
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>-</Operator>
+    <Param>5</Param>
+    <Operator>+</Operator>
+    <Param>2</Param>
+  </Skaicius>
+
+  <Skaicius>
+    <Param>2</Param>
+    <Operator>/</Operator>
+    <Param>5</Param>
+    <Operator>-</Operator>
+    <Param>2</Param>
+  </Skaicius>
+
+  <Skaicius>
+    <Param>2</Param>
+    <Operator2>/</Operator2>
+    <Brac>
+      <Param>5</Param>
+      <Operator>-</Operator>
+      <Param>2</Param>
+    </Brac>
+  </Skaicius>
+
+  <Skaicius>
+    <Param>2</Param>
+    <Operator2>*</Operator2>
+    <Brac>
+      <Param>5</Param>
+      <Operator>+</Operator>
+      <Param>2</Param>
+    </Brac>
+    <Operator2>+</Operator2>
+    <Brac>
+      <Param>5</Param>
+      <Operator>+</Operator>
+      <Param>2</Param>
+    </Brac>
+  </Skaicius>
+</Skaiciai>
+

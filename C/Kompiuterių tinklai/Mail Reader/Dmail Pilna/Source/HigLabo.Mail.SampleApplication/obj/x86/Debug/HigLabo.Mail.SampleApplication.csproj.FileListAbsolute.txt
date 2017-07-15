@@ -1,0 +1,40 @@
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.pdb
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.csprojResolveAssemblyReference.cache
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.pdb
+C:\@Work\CodeProjectArticle\Mail\Imap\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.csprojResolveAssemblyReference.cache
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.csprojResolveAssemblyReference.cache
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Net.dll
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.pdb
+C:\@Work\CodeProjectArticle\Mail\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Net.pdb
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Net.dll
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.csprojResolveAssemblyReference.cache
+C:\Users\Dominik\Desktop\New folder (2)\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.exe
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.SampleApplication.pdb
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Mail.dll
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\bin\Debug\HigLabo.Net.dll
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dominik\Desktop\Dmail taisymas\Source\HigLabo.Mail.SampleApplication\obj\x86\Debug\HigLabo.Mail.SampleApplication.csprojResolveAssemblyReference.cache

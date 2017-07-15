@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="fbc240ab-ab16-4223-9253-06b12345ce7b" name="UMLStrategyComputer" linkedPackageId="811460c3-21a9-43a4-99d4-42e5a7d5faa1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="09c29727-6e3b-440d-a310-9fda78912ec6">
+      <profileInstance Id="62b48904-812e-446c-8ec0-a51e38b969a8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="330182c4-db50-43f3-afba-860ef70aea11">
+      <profileInstance Id="ea8d2b53-36ae-4896-b2fe-2250cb7d2b7a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5418c2cb-8019-412a-86c0-f289e195b50d">
+      <profileInstance Id="457a19f8-a11e-4a24-8431-72e231903dea" name="CSharpProfile">
+        <elementDefinition Id="cd76af02-8cbc-4106-9e1f-d10ead0cc97d" />
+      </profileInstance>
+      <elementDefinition Id="150d98c3-cc04-489e-a24e-e90be1ac059e" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <package Id="811460c3-21a9-43a4-99d4-42e5a7d5faa1" name="UMLStrategyComputer">
+    <elementDefinition Id="3f091f69-0ec9-4a25-9b23-ef643427ea1e" />
+  </package>
+</logicalClassDesignerModel>

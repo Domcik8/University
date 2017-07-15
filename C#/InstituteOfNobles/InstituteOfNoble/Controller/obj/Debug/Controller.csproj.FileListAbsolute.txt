@@ -1,0 +1,13 @@
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Controller.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Controller.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Domain.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Repository.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\UI.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Domain.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Repository.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\UI.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\obj\Debug\Controller.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\obj\Debug\Controller.pdb
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Commands.dll
+C:\Users\Dominik\Desktop\InstituteOfNobles\InstituteOfNoble\Controller\bin\Debug\Commands.pdb

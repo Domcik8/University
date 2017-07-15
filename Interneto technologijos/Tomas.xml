@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="TomasXSLT.xslt" ?>
+<Planet name='Earth' xmlns='planet' xmlns:ctn='continent' xmlns:ctr='country' xmlns:ca='city' xmlns:reg='region'>
+  <Population>7241000000</Population>
+  <Continent_quantity>7</Continent_quantity>
+  <ctn:Continent name='North America'>
+    <ctn:Population>468000000</ctn:Population>
+    <ctn:Country_quantity>23</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='South America'>
+    <ctn:Population>523000000</ctn:Population>
+    <ctn:Country_quantity>12</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='Africa'>
+    <ctn:Population>1166000000</ctn:Population>
+    <ctn:Country_quantity>54</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='Oceania'>
+    <ctn:Population>39000000</ctn:Population>
+    <ctn:Country_quantity>14</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='Asia'>
+    <ctn:Population>4384000000</ctn:Population>
+    <ctn:Country_quantity>44</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='Antartica'>
+    <ctn:Population>0</ctn:Population>
+    <ctn:Country_quantity>0</ctn:Country_quantity>
+  </ctn:Continent>
+  <ctn:Continent name='Europe'>
+    <ctn:Population>743000000</ctn:Population>
+    <ctn:Country_quantity>47</ctn:Country_quantity>
+    <ctr:Country name='Germany' type ='Federation'>
+      <ctr:Population>81083600</ctr:Population>
+      <ca:Capital name='Berlin'>
+        <ca:Population>3502000</ca:Population>
+      </ca:Capital>
+    </ctr:Country>
+    <ctr:Country name='Russia' type='Federation'>
+      <ctr:Population>143975923</ctr:Population>
+      <ca:Capital name='Moscow'>
+        <ca:Population>1192000</ca:Population>
+      </ca:Capital>
+    </ctr:Country>
+    <ctr:Country name='Lithuania' type='Republic'>
+      <ctr:Population>2893336</ctr:Population>
+      <ca:Capital name='Vilnius'>
+        <ca:Population>535216</ca:Population>
+        <reg:Region name='Baltupiai'>
+          <reg:Area>2,6</reg:Area>
+        </reg:Region>
+        <reg:Region name='Pasilaiciai'>
+          <reg:Area>7,9</reg:Area>
+          <reg:Population>33056</reg:Population>
+        </reg:Region>
+        <reg:Region name='Justiniskes'>
+          <reg:Population>27462</reg:Population>
+          <reg:Area>3</reg:Area>
+        </reg:Region>
+      </ca:Capital>
+    </ctr:Country>
+    <ctr:Country name='Poland' type='Republic '>
+      <ctr:Population>38483957</ctr:Population>
+      <ca:Capital name='Warsaw'>
+        <ca:Population>1711000</ca:Population>
+      </ca:Capital>
+    </ctr:Country>
+  </ctn:Continent>
+</Planet>
