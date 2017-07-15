@@ -1,0 +1,116 @@
+	Push Dx
+	Mov Bx, 0
+	Call Check_D_1
+	Call Check_W_1
+	Call Read_Byte
+	Call Check_Mod
+	Push Dx
+	Shr Dx, 6
+	Mov Dh, 0
+	Shl Dx, 3
+	Call Check_Reg_1
+	Pop Dx
+	Call Check_Rm_1
+	Push Si
+	Push Cx
+	Call Set_Si_To_Code_Name
+	Call Fill_Code_Output_Buffer
+	Cmp D, 1
+	Je Case_F_D_1_1
+Case_F_D_0_1:
+	Mov Bp, 0 
+	Call Case_F_Fill_Reg
+	Call Case_F_Fill_Colon
+	Cmp Mod_, 3
+	Jne Case_F_Mod_Not_11_1
+Case_F_D_0_2:	
+	Call Case_F_Fill_Mem_Or_Reg_1
+	Cmp Mod_, 3
+	Jne Case_F_Mod_Not_11_2
+Case_F_D_0_3:
+	Jmp Case_F_2
+Case_F_D_1_1:
+	Mov Bp, 1
+	Cmp Mod_, 3
+	Jne Case_F_Mod_Not_11_1
+Case_F_D_1_2:
+	Call Case_F_Fill_Mem_Or_Reg_1
+	Cmp Mod_, 3
+	Jne Case_F_Mod_Not_11_2
+Case_F_D_1_3:	
+	Call Case_F_Fill_Colon	
+	Call Case_F_Fill_Reg
+	Jmp Case_F_2
+Case_F_Mod_Not_11_1:
+	Mov Byte Ptr [Ds:Di], '['
+	Inc Di
+	Inc Cx
+	Cmp Bp, 0
+	Je Case_F_D_0_2
+	Jmp Case_F_D_1_2
+Case_F_Mod_Not_11_2:
+	Mov Byte Ptr [Ds:Di], ']'
+	Inc Di
+	Inc Cx
+	Cmp Bp, 0
+	Je Case_F_D_0_3
+	Jmp Case_F_D_1_3
+Case_F_Fill_Reg:
+	Push Di
+	Push Si
+	Push Cx
+	Mov Si, Offset Reg
+	Mov Cx, 2
+	Rep Movsb
+	Pop Cx
+	Pop Si
+	Pop Di
+	Add Di, 2
+	Add Cx, 2	
+	Ret
+Case_F_Fill_Colon:
+	Mov [Ds:Di], ' ,'
+	Add Di, 2
+	Add Cx, 2
+	Ret
+Case_F_Fill_Mem_Or_Reg_1:
+	Cmp Bh, 1
+	Je Mod_00_Rm_110
+Case_F_Fill_Mem_Or_Reg_2:	
+	Mov Bl, Bh
+	Mov Bh, 0
+	Push Si
+	Push Cx
+	Mov Si, Offset Rm
+	Mov Cx, Bx
+	Rep Movsb
+	Pop Cx
+	Pop Si
+	Add Si, Bx
+	Add Cx, Bx	
+	Ret	
+Mod_00_Rm_110:
+	Push SI
+	Mov Si, Offset W
+	Mov Byte Ptr[Ds:Si], 1
+	Pop Si
+	Pop Dx
+	Mov Helper, Dx
+	Call Immediate_Byte_1
+	Mov Bx, Cx
+	Pop Si
+	Pop Cx
+	Pop Dx
+	Call Check_W_1
+	Push Si
+	Push Cx
+	Mov Cx, Bx
+	Push Helper
+	Ret
+Case_F_2:
+	Call Add_Enter_To_Code_Output_Buffer
+	Call Fill_Output_Buffer
+	Call Write_To_Output_File
+	Pop Cx
+	Pop Si	
+	Ret

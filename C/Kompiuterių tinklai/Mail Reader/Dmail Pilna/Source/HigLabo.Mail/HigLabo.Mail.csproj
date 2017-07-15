@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77DD75B1-D6AD-488C-926C-D61A5FA48D26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HigLabo.Mail</RootNamespace>
+    <AssemblyName>HigLabo.Mail</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Async\ImapDataReceiveContext.cs" />
+    <Compile Include="Async\Pop3DataReceiveContext.cs" />
+    <Compile Include="Async\SmtpDataReceiveContext.cs" />
+    <Compile Include="Common\ContentDisposition.cs" />
+    <Compile Include="Common\ContentType.cs" />
+    <Compile Include="Common\FieldParameterEncoding.cs" />
+    <Compile Include="Common\InternetTextMessage.cs" />
+    <Compile Include="Common\MailAddress.cs" />
+    <Compile Include="Common\MailClientException.cs" />
+    <Compile Include="Common\MailContent.cs" />
+    <Compile Include="Common\MailMessage.cs" />
+    <Compile Include="Common\MailParser.cs" />
+    <Compile Include="Common\MailPriority.cs" />
+    <Compile Include="Common\MimeContent.cs" />
+    <Compile Include="Common\TransferEncoding.cs" />
+    <Compile Include="Imap\Command\CapabilityResult.cs" />
+    <Compile Include="Imap\Command\ImapCommandResult.cs" />
+    <Compile Include="Imap\Command\ImapCommandResultStatus.cs" />
+    <Compile Include="Imap\Command\ImapIdleCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Imap\Command\ImapIdleCommandMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Imap\Command\ImapIdleCommandMessageReceivedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Imap\Command\ImapIdleCommandMessageType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Imap\Command\ListLineResult.cs" />
+    <Compile Include="Imap\Command\ListResult.cs" />
+    <Compile Include="Imap\Command\SearchResult.cs" />
+    <Compile Include="Imap\Command\SelectResult.cs" />
+    <Compile Include="Imap\Command\Store.cs" />
+    <Compile Include="Imap\ImapClient.cs" />
+    <Compile Include="Imap\ImapConnectionState.cs" />
+    <Compile Include="Imap\ImapFolder.cs" />
+    <Compile Include="Imap\NamingConversion.cs" />
+    <Compile Include="Pop3\Command\DeleCommand.cs" />
+    <Compile Include="Pop3\Command\ListCommand.cs" />
+    <Compile Include="Pop3\Command\ListCommandResult.cs" />
+    <Compile Include="Pop3\Command\Pop3Command.cs" />
+    <Compile Include="Pop3\Command\Pop3CommandResult.cs" />
+    <Compile Include="Pop3\Command\RetrCommand.cs" />
+    <Compile Include="Pop3\Command\StatCommandResult.cs" />
+    <Compile Include="Pop3\Command\TopCommand.cs" />
+    <Compile Include="Pop3\Command\UidlCommand.cs" />
+    <Compile Include="Pop3\Command\UidlCommandResult.cs" />
+    <Compile Include="Pop3\InvalidPop3MessageException.cs" />
+    <Compile Include="Pop3\Pop3AuthenticateMode.cs" />
+    <Compile Include="Pop3\Pop3Client.cs" />
+    <Compile Include="Pop3\Pop3ConnectionState.cs" />
+    <Compile Include="Pop3\Pop3Content.cs" />
+    <Compile Include="Pop3\Pop3Message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Smtp\Command\DataCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\EhloCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\ExpnCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\HeloCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\HelpCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\MailCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\RcptCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\RsetCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\Command\SmtpCommand.cs" />
+    <Compile Include="Smtp\Command\SmtpCommandResult.cs" />
+    <Compile Include="Smtp\Command\SmtpCommandResultLine.cs" />
+    <Compile Include="Smtp\Command\VrfyCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\SendMail\SendMailCommand.cs" />
+    <Compile Include="Smtp\SendMail\SendMailListResult.cs" />
+    <Compile Include="Smtp\SendMail\SendMailResult.cs" />
+    <Compile Include="Smtp\SendMail\SendMailResultState.cs" />
+    <Compile Include="Smtp\SmtpAuthenticateMode.cs" />
+    <Compile Include="Smtp\SmtpClient.cs" />
+    <Compile Include="Smtp\SmtpConnectionState.cs" />
+    <Compile Include="Smtp\SmtpContent.cs" />
+    <Compile Include="Smtp\SmtpMessage.cs" />
+    <Compile Include="Smtp\SmtpResponseCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HigLabo.Net\HigLabo.Net.csproj">
+      <Project>{1359B863-E7FC-4BCF-9652-4D05EA393C4C}</Project>
+      <Name>HigLabo.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
