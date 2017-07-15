@@ -1,4 +1,0 @@
-Indu plovimas       1   2   1
-Statyba             2   2   12
-Nueiti i kirpikla   3   6   500
-Apsipirkti          13  13  200

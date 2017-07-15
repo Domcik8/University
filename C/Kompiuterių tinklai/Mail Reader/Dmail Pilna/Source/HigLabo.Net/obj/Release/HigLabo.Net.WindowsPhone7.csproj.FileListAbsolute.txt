@@ -1,6 +1,0 @@
-C:\@HigLabo\HigLabo.Net\Bin\Release\HigLabo.Net.WindowsPhone7.dll
-C:\@HigLabo\HigLabo.Net\Bin\Release\HigLabo.Net.WindowsPhone7.pdb
-C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.WindowsPhone7.dll
-C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.WindowsPhone7.pdb
-C:\@HigLabo\HigLabo.Net\Bin\Release\Newtonsoft.Json.WindowsPhone7.dll
-C:\@HigLabo\HigLabo.Net\obj\Release\HigLabo.Net.WindowsPhone7.csprojResolveAssemblyReference.cache

@@ -1,3 +1,0 @@
-(//knyga)[kaina/text() = number((//knyga)[1]/kaina/text())]/pavadinimas/text()
-(//knyga)[kaina/text() = number((//knyga)[1]/kaina/text())]/pavadinimas/text()
-(//knyga)[kaina/text() = number((//knyga)[1]/kaina/text())]/pavadinimas/text()

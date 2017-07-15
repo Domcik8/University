@@ -1,6 +1,0 @@
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\bin\Debug\RPG ObjectExtension.exe.config
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\bin\Debug\RPG ObjectExtension.exe
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\bin\Debug\RPG ObjectExtension.pdb
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\obj\Debug\RPG ObjectExtension.exe
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\obj\Debug\RPG ObjectExtension.pdb
-C:\Users\Dominik\Desktop\VU\5 semestras\Programų sistemų projektavimas\PSPuzd2\RPG ObjectExtension\obj\Debug\RPG ObjectExtension.csprojResolveAssemblyReference.cache

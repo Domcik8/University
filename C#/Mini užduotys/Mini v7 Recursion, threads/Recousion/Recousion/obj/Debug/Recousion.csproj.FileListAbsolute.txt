@@ -1,6 +1,0 @@
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\bin\Debug\Recousion.exe.config
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\bin\Debug\Recousion.exe
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\bin\Debug\Recousion.pdb
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\obj\Debug\Recousion.csprojResolveAssemblyReference.cache
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\obj\Debug\Recousion.exe
-C:\Users\Dominik\Desktop\VU\3 semestras\Taikomasis objektinis programavimas\Mini v7 Recursion, threads\Recousion\Recousion\obj\Debug\Recousion.pdb
