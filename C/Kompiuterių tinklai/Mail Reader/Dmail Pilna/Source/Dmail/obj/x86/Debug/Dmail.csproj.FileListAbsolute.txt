@@ -1,8 +1,0 @@
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\bin\Debug\HigLabo.Mail.SampleApplication.exe
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\bin\Debug\HigLabo.Mail.SampleApplication.pdb
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\bin\Debug\HigLabo.Mail.dll
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\bin\Debug\HigLabo.Net.dll
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\obj\x86\Debug\Dmail.csprojResolveAssemblyReference.cache
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\obj\x86\Debug\HigLabo.Mail.SampleApplication.exe
-C:\Users\Dominik Lisovski\Google Drive\VU\4 semestras\Kompiuterių tinklai\Praktika\Mail Reader\Dmail Pilna\Source\Dmail\obj\x86\Debug\HigLabo.Mail.SampleApplication.pdb
